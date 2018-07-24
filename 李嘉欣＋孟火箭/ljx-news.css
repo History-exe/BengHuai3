@@ -1,0 +1,419 @@
+/*原始代码*/
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing 属性允许你以某种方式定义某些元素，以适应指定区域。
+    可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。*/
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    font: 20px/100% "微软雅黑";
+    background: #1759a6;
+}
+
+table {
+    cellspacing: 0px;
+    cellpadding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    /*inherit是继承父类的属性，一般用于字体、颜色、背景等*/
+}
+
+li {
+    list-style: none;
+    display: list-item;
+}
+
+.w {
+    width: 960px;
+    margin:0 auto;
+}
+
+.clearfix:after {
+    content:".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+div {
+    display: block;
+}
+
+body {
+    position: relative;
+}
+/* canvas的css样式 */
+/* #c {
+    position:absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color:#1759a6;
+} */
+
+/* 头部导航栏的css代码 */
+.nav {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    width: 100%;
+    min-width: 1024px;
+    z-index: 1000;
+    font-size: 18px;
+}
+
+.nav .nav-list {
+    height: 100%;
+}
+
+.nav .nav-list ul {
+    height: 100%;
+    /* width: 620px; */
+    width: 670px;
+    margin:0 auto;
+}
+
+.nav .nav-list li {
+    float: left;
+    margin-right: 20px;
+}
+
+.nav .nav-list li:last-child {
+    margin-right: 0;
+}
+
+
+
+.nav .nav-list li a {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border: 2px solid #85d9f3;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    transform:skew(-10deg);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav .nav-list li:nth-child(2) a{
+    background-color: #00c3ff;
+}
+
+.nav .nav-list li a:hover {
+    border-color: orange;
+}
+
+/*主页面main的样式*/
+#main {
+    /* background: url("images/bg.png") no-repeat; */
+    background: url('images/253.jpg') no-repeat;
+    background-position: top center;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding-top: 378px;
+    background-size: cover;
+    
+}
+
+/* 触发按钮的样式 */
+.btn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+/* 游戏角色的css样式代码 */
+.female-role {
+    /* position: absolute; */
+    position: fixed;
+    width: 1024px;
+    height: 819px;
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    top: 0px;
+    margin-left: 50%;
+    z-index: 9;
+}
+
+.female-role img {
+    position: absolute;
+    bottom: 0;
+    transition: all 1s ease;
+}
+
+#main .p1 img {
+    left: 100px;
+    opacity: 0;
+    transform: translateX(20%);
+}
+
+#main .p2 img {
+    left: 100px;
+    opacity: 0;
+    transform: translateX(20%);
+    background-size: contain;
+}
+
+#main .p3 img {
+    left: 100px;
+    opacity: 0;
+    transform: translateX(20%);
+}
+
+#main .p4 img {
+    left: 100px;
+    opacity: 0;
+    transform: translateX(20%);
+}
+
+#main .p1.show img, #main .p2.show img, #main .p3.show img, #main .p4.show img {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+.big_bg {
+    border: 3px solid rgba(0,0,0,.2);
+    background-color: #282f3f;
+    border-bottom: 0px solid;
+    display:block;
+    margin: auto;
+    padding: 1px 20px;
+    height: 1711px;
+}
+
+ul.news-nav {
+    display:block;
+    height: 58px;
+    border-bottom: 1px solid #4b869f;
+
+}
+
+ul.news-nav li {
+    float:left;
+    width: 86px;
+}
+
+ul.news-nav li a {
+    width: 86px;
+    height: 57px;
+    display: block;
+    text-align: center;
+    line-height: 57px;
+    border-bottom-width: 1px;
+}
+
+ul.news-nav li:hover a {
+    color: #74dcff;
+}
+
+.news_list {
+    height: 1541px;
+    clear: both;
+    /*默认隐藏*/
+    display: none;
+}
+
+.news_list li {
+    margin: 18px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #181c26;
+    padding-bottom: 18px;
+    line-height: 1.9em;
+}
+
+.news_list li:hover img {
+    border:3px solid #74dcff;
+}
+
+.news_list li:hover h3 {
+    color: #74dcff;
+}
+
+.news_list li:hover div {
+    color: #74dcff;
+}
+
+.news_list li:last-child {
+    border-bottom-width: 0;
+}
+.news_list li img {
+    float: left;
+    margin-right: 20px;
+    border:3px solid #fff;
+}
+
+.news_list li h3 {
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.summary {
+    height: 30px;
+    margin-top: 30px;
+    /*文本不换行*/
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* 更多新闻的css代码 */
+#more_news {
+    position: relative;
+    margin-top: 20px;
+    width: 914px;
+    height: 72px;
+    background: linear-gradient(to right,rgba(0,0,0,0) 20%,rgba(255,198,76,.5) 50%,rgba(0,0,0,0) 80%);
+}
+
+.yellow {
+    width: 255px;
+    height: 72px;
+    background-color: #fedf4c;
+    position: absolute;
+    left: 329px;
+    text-align: center;
+    margin: auto;
+    padding: 24px;
+}
+
+.yellow span {
+    display: block;
+}
+
+.yellow span:first-child {
+    font-size: 28px;
+    color: #313131;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.yellow span:last-child {
+    font-size: 10px;
+    color: rgba(0,0,0,.3);
+}
+
+
+/* 回到顶部的css代码 */
+.actGotop {
+    position:fixed;
+    bottom: 40px;
+    right: 100px;
+    width: 150px;
+    height: 195px;
+    display: none;
+    cursor: pointer;
+}
+
+.actGotop i {
+    width: 150px;
+    height: 195px;
+    display:inline-block;
+    background: url("images/blog7year_gotop.png") no-repeat;
+    outline: none;
+}
+/* #btn-top {
+    display: block;
+    position: absolute;
+    background-image: url("images/back.png");
+    background-repeat: no-repeat;
+    bottom: 0px;
+    right: -94px;
+} */
+
+/*底部背景的css代码*/
+#bottom_bg {
+    background: url("images/section_2_fg_1.png") no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 332px;
+    background-position: bottom center;
+    bottom: 75px;
+}
+
+/*显示*/
+.big_bg ul.selected {
+    display: block;
+}
+
+/*新闻导航的样式*/
+ul.news-nav li.active a{
+    border-bottom-color: #74dcff;
+    background-color: #3e4963;
+    color: #74dcff;
+    border-bottom-style: solid;
+    border-bottom-width: 3px
+}
+
+/* 脚部 */
+.footer {
+    background-color: #000;
+    /* z-Index: -1;  */
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+span,
+p {
+    font-size: 12px;
+    color: #999999;
+}
+
+.zyc-main-bottom .call li {
+    position: relative;
+    float: left;
+}
+.zyc-main-bottom .call li img:hover{
+    opacity: 0.5;   /* 鼠标移入变透明 */
+    
+}
+
+.zyc-main-bottom .call {
+    position: absolute;
+    top: 450px;
+    left: 176px;
+}
+
+.zyc-main-bottom .call li:nth-child(2) {
+    margin-right: -24px
+}
+
+.zyc-main-bottom .call li:nth-child(4) {
+    margin-right: -10px
+}
+
+.yangou {
+    color: #999
+}
+
+.yangou:hover {
+    color: #fff
+}
+.footer {
+    position: relative;
+    background-color: #000;
+    height: 236px;
+}
+
+.footer-content {
+    position: absolute;
+    left: 100px;
+}

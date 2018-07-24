@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="strategy2.css" rel="stylesheet" type="text/css">
+    <script src='../jquery-1.12.4.js'></script>
+    <!-- <script src='../ljx-news.js'></script> -->
+    <script src="../common.js"></script>
+    <script>
+        $(function(){
+            $('.actGotop').on('mouseenter',function(){
+        $(this).children("i").css({
+            'background':'url("../images/blog7year_gotopd.gif") no-repeat',
+        })
+    })
+
+    //需求5:鼠标移出小火箭,小火箭的图片变回静态图
+    $('.actGotop').on('mouseleave',function(){
+        $(this).children('i').css({
+            'background':'url("../images/blog7year_gotop.png") no-repeat',
+        })
+    })
+
+    //需求6:当被卷入的高度大于屏幕可视区的高度时,小火箭出现,否则隐藏
+    // $(window).on('scroll',function(){
+    //     var scrollTop = $(this).scrollTop();
+    //     if(scrollTop >= 10){
+    //         $('.actGotop').show()
+    //     }else{
+    //         $('.actGotop').hide()
+    //     }
+    // })
+
+    //需求7:当鼠标点击小火箭的时候,缓缓回到顶部
+    var goTop = document.querySelector(".actGotop");
+    var timer = null;
+    var target = 0;
+    var leader = 0;
+    window.onscroll = function(){
+        scroll().scrollTop > 0 ? show(goTop) : hide(goTop);
+        leader = scroll().scrollTop;
+    }
+    goTop.onclick = function(){
+        target = 0;
+        
+        timer=setInterval(function(){
+            leader = leader + (target-leader)/10
+            window.scrollTo(0,leader);
+            if(leader == target){
+                clearInterval(timer);
+                goTop.style.display = 'none';
+            }
+        },30)
+    }
+
+    function show(ele){
+        ele.style.display = 'block'
+      }
+      
+      function hide(ele){
+        ele.style.display = 'none'
+      }
+        })
+    </script>
+    <style>
+            .button {
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+                /* position: absolute; */
+                /* font-size: 1.5em; */
+                text-transform: uppercase;
+                /* padding: 7px 20px; */
+                /* left: 50%; */
+                /* width: 200px; */
+                /* margin-left: -100px;
+                top: 50%; */
+                border-radius: 10px;
+                color: white;
+                text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+                border: 5px solid transparent;
+                /* border-bottom-color: rgba(0,0,0,0.35); */
+                /* background: hsla(260, 100%, 50%, 1); */
+                cursor: pointer;
+            
+                animation: pulse 1s infinite alternate;
+                transition: background 0.4s, border 0.2s, margin 0.2s;
+            }
+            .button:hover {
+                /* background: hsla(220, 100%, 60%, 1); */
+                margin-top: -1px;
+            
+                animation: none;
+            }
+            .button:active {
+                border-bottom-width: 0;
+                margin-top: 5px;
+            }
+            @keyframes pulse {
+                0% {
+                    margin-top: 0px;
+                }
+                100% {
+                    margin-top: 6px; 
+                } 
+            }
+        </style>
+</head>
+<body>
+    <!-- 头部导航的开始 -->
+    <div class="nav">
+            <div class="nav-list w clearfix">
+                <ul class="clearfix">
+                    <li class="button"><a href="#">首页</a></li>
+                    <li class="button"><a href="#">作战咨询</a></li>
+                    <li class="button"><a href="#">角色介绍</a></li>
+                    <li class="button"><a href="#">游戏特色</a></li>
+                    <li  class="button"><a href="#">壁纸下载</a></li>                   
+                </ul>
+            </div>       
+    
+    </div>
+<div id="main">
+    <div id="female_role"></div>
+    <div class="big_bg">
+        <div style="position:relative;">
+            <a id="back_link" href="../ljx-news.html">返回列表页>></a>
+        </div>
+        <ul id="news_nav_big" class="news-nav">
+            <li class="on">
+                <a href="#">攻略</a>
+            </li>
+        </ul>
+        <img id="title_img_big" src="https://webstatic.bh3.com/www_bh3_com/news_image/uploads/986332b06cc9d6906f3e66c31a8f3050.jpeg">
+        <h2>爱酱军械库 | 「永暮双狼」</h2>
+        <div class="create_time">2018-05-17 12:00</div>
+        <div class="content">
+            <p>
+                <span style="font-size: 14px;">欢迎收看《爱酱的军械库》，爱酱会在本栏目中定期和舰长分（an）享（li）武器的使用心得及搭配建议。</span>
+            </p>
+            <p>
+                <span style="font-size: 14px;">今天要介绍的是即将在2.3版本登场的拳套武器——「永暮双狼」：<span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章」</span>。</span><br>
+            </p>
+            <p><br>
+            </p>
+            <p style="text-align: center;">
+                <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540446386991.jpg" title="1526540446386991.jpg" alt="2018.5.24.jpg">
+            </p>
+            <p>
+                <span style="font-size: 14px;"><br></span>
+            </p>
+            <p>
+                <span style="font-size: 14px; color: rgb(255, 192, 0);">一、武器介绍</span><br>
+            </p>
+            <p style="text-align: center;">
+                <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540466284224.jpg" title="1526540466284224.jpg" alt="0 (1).jpg">
+            </p>
+            <p style="text-align: center;">
+                <span style="font-size: 14px;" >5★ 攻击力283 会心24</span><br>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px">天命组织制造的“诸神座”武器，其名称来源于北欧神话中追逐日月的双生狼，斯库尔与哈提。传说当“诸神的黄昏”降临之时，它们便会吞噬日月，让九界陷入永远的混沌。</span>
+            </p>
+            <p>
+                <span style="font-size: 14px;"><br></span>
+            </p>
+            <p>
+                <span style="font-size: 14px;color: rgb(255, 192, 0);">二、武器技能</span><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">★以下皆为50级数据</span><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">【逐日之影】</span>
+            </p>
+            <p>
+                <span style="font-size: 14px;">[SP消耗：11][冷却：30秒]</span>
+            </p>
+            <p>
+                <span style="font-size: 14px;">开启后，持续释放冲击，每0.5秒对周围敌人造成50%攻击力的物理伤害，并使角色受到的来自侧后方的伤害降低65%，持续10.0秒。</span>
+            </p>
+            <p><br>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">【碎月之牙】</span>
+            </p>
+            <p>
+                <span style="font-size: 14px;">攻击命中敌人时角色造成的物理伤害提高3.0%，持续3.0秒，最多叠加10次，每层效果独立计算持续时间。对处于时空减速、攻击速度降低、移动速度降低状态的敌人暴击率提高10%。</span>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;color: rgb(255, 192, 0);">三、技能评价</span><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">【逐日之影】的主动效果类似于「萧云·红（中）」的技能效果，每0.5秒造成最高50%攻击力的物理伤害，若是从一开始就计算攻击的话，10秒最多可以打出20下，也就是1000%攻击力的总物理伤害量。由于符华大多以近战攻击为主，因此主动的效果不容易浪费，收益较高。同时来自侧后方的攻击有65%的减伤，对生存能力有很高的提升。</span>
+            </p>
+            <p><br>
+            </p>
+            <p style="text-align: center;">
+                <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540577818936.gif" title="1526540577818936.gif" alt="0 (1).gif">
+            </p>
+            <p style="text-align: center;">
+                <span style="font-size: 14px;">以上动图为减伤展示，仅供参考。</span>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">【碎月之牙】仅需攻击命中叠加物理伤害，可受大部分攻击方式触发（包括爆发攻击），3秒的持续时间也使得只要稍微保持攻击频率就能做到接近常驻最高30%物理伤害加成。攻击处于减速的单位额外提供10%的暴击率加成，该减速包括时空减速、攻速减速、移速减速三种减速异常，对加成触发要求比较宽松，通过合理的角色、装备、阵容搭配能降低暴击率加成的触发门槛。</span>
+            </p>
+            <p>
+                <span style="font-size: 14px;color: rgb(255,192,0);">四、适用角色</span>
+            </p>
+            <p><br>
+            </p>
+            <p style="text-align: center">
+                <span><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540595768479.jpg" title="1526540595768479.jpg" alt="0 (2).jpg" width="250" height="244"></span>
+            </p>
+            <p style="text-align: center;">
+                <span style="font-size: 14px;">「白夜执事」</span>
+            </p>
+            <p style="text-align: center;">
+                <span><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540609301684.jpg" title="1526540609301684.jpg" alt="0 (5).jpg"></span>
+            </p>
+            <p style="text-align: center">
+                <span style="font-size: 14px;">圣痕：「薛定谔·乐队（上）」+「叶卡捷琳娜（中）」+「薛定谔·乐队（下）」</span><br>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">「白夜执事」是符华的第四套装甲，生物属性的近战物理系女武神，拥有丰富的分支攻击手段，通过消耗烈波来提升输出，必杀技为爆发状态进行快速连打。由于「白夜执事」较依赖必杀技的爆发，而必杀技需要100点SP才能够开启。因此，「薛定谔·乐队」就很适合给「白夜执事」使用。「薛定谔·乐队（上）」仅需攻击就能触发物理伤害加成和全伤害加成，「薛定谔·乐队（下）」不仅能增加攻速，还能提供SP回复，使「白夜执事」能更快地攒出必杀技和必杀技期间的SP回复，两件套延长“激昂”的持续效果并间隔短时间内提高50%的分支物理伤害。</span>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">「白夜执事」的必杀技不仅能享受到「薛定谔·乐队（上）」的加成，同时必杀技期间的连打有分支攻击，同样能享受到「薛定谔·乐队（两件套）」的分支物理伤害加成。「叶卡捷琳娜（中）」无条件物理增伤的优势，同样适合给必杀技是爆发状态的「白夜执事」使用。</span>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">主动技【逐日之影】的使用非常灵活，攻守兼备。若是追求生存，常规状态下自身HP较低的话，开启主动技能可以防止背刺被秒杀。或是追求伤害，搭配必杀技同时开启，既可以享受到其被动的15%暴击率加成，又进一步提高了必杀技的总伤害量。</span>
+            </p>
+            <p><br>
+            </p>
+            <p style="text-align: center;">
+                <span>
+                    <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540624336923.jpg" title="1526540624336923.jpg" alt="0 (3).jpg" width="258" height="259">
+                </span>
+            </p>
+            <p style="text-align: center;">
+                <span style="font-size: 14px;">「影骑士·月轮」</span>
+            </p>
+            <p style="text-align: center;">
+                <span>
+                    <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540644646547.jpg" title="1526540644646547.jpg" alt="0.jpg">
+                </span>
+            <p style="text-align: center;">
+                <span style="font-size: 14px;">圣痕：「莫奈」三件套</span>
+            </p>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">「影骑士·月轮」是以雷伤为主要输出的角色，「永暮双狼」适合「月轮」的原因在于主动技【逐日之影】能触发「影骑士·月轮」的被动技“牙”的效果。通过开启主动技能更为频繁地触发“牙”的效果从而提高「影骑士·月轮」的伤害量，非爆发期间频繁触发“牙”能加快SP回复效率，主动技能20次伤害可触发6次牙，造成1800%倍率的雷伤加上净SP收益接近翻倍能够更快开启必杀技（主动技能消费11SP，6次牙可以回复18SP）。同时主动技持续期间对侧后方的伤害有65%的减免，在月轮多以正面攻击的情况下搭配自身减伤被动技，释放百裂拳和「永暮双狼」主动技时生存力将会极强。</span>
+            </p>
+            <p style="text-align: center;">
+                <span>
+                    <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1526540662318897.gif" title="1526540662318897.gif" alt="0.gif">
+                </span>
+            </p>
+            <p><br>
+            </p>
+            <p>
+                <span style="font-size: 14px;">*本篇数据基于测试服，实际数据请以正式服为准。</span>
+            </p>
+            <p><br>
+            </p>
+        </div>
+        <div class="page_contro1">
+            <a href="#"><< 上一篇</a>
+            <a class="pull-right">没有下一篇了</a>
+        </div>
+    </div>
+</div>
+
+ <!-- 回到顶部 -->
+    <!-- <a href="#main" id="btn-top"><img src="images/back.png"></a> -->
+    <div class="actGotop" style="z-index: 11;">
+            <!-- <a href="#" title="返回顶部"></a> -->
+            <i></i>
+        </div>
+</body>
+</html>

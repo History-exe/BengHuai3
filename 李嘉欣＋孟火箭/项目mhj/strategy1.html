@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="strategy1.css" rel="stylesheet" type="text/css">
+    <style>
+            .button {
+                font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+                /* position: absolute; */
+                /* font-size: 1.5em; */
+                text-transform: uppercase;
+                /* padding: 7px 20px; */
+                /* left: 50%; */
+                /* width: 200px; */
+                /* margin-left: -100px;
+                top: 50%; */
+                border-radius: 10px;
+                color: white;
+                text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+                border: 5px solid transparent;
+                /* border-bottom-color: rgba(0,0,0,0.35); */
+                /* background: hsla(260, 100%, 50%, 1); */
+                cursor: pointer;
+            
+                animation: pulse 1s infinite alternate;
+                transition: background 0.4s, border 0.2s, margin 0.2s;
+            }
+            .button:hover {
+                /* background: hsla(220, 100%, 60%, 1); */
+                margin-top: -1px;
+            
+                animation: none;
+            }
+            .button:active {
+                border-bottom-width: 0;
+                margin-top: 5px;
+            }
+            @keyframes pulse {
+                0% {
+                    margin-top: 0px;
+                }
+                100% {
+                    margin-top: 6px; 
+                } 
+            }
+        </style>
+
+    <script src='../jquery-1.12.4.js'></script>
+    <!-- <script src='../ljx-news.js'></script> -->
+    <script src="../common.js"></script>
+    <script>
+        $(function(){
+            $('.actGotop').on('mouseenter',function(){
+        $(this).children("i").css({
+            'background':'url("../images/blog7year_gotopd.gif") no-repeat',
+        })
+    })
+
+    //需求5:鼠标移出小火箭,小火箭的图片变回静态图
+    $('.actGotop').on('mouseleave',function(){
+        $(this).children('i').css({
+            'background':'url("../images/blog7year_gotop.png") no-repeat',
+        })
+    })
+
+    //需求6:当被卷入的高度大于屏幕可视区的高度时,小火箭出现,否则隐藏
+    // $(window).on('scroll',function(){
+    //     var scrollTop = $(this).scrollTop();
+    //     if(scrollTop >= 10){
+    //         $('.actGotop').show()
+    //     }else{
+    //         $('.actGotop').hide()
+    //     }
+    // })
+
+    //需求7:当鼠标点击小火箭的时候,缓缓回到顶部
+    var goTop = document.querySelector(".actGotop");
+    var timer = null;
+    var target = 0;
+    var leader = 0;
+    window.onscroll = function(){
+        scroll().scrollTop > 0 ? show(goTop) : hide(goTop);
+        leader = scroll().scrollTop;
+    }
+    goTop.onclick = function(){
+        target = 0;
+        
+        timer=setInterval(function(){
+            leader = leader + (target-leader)/10
+            window.scrollTo(0,leader);
+            if(leader == target){
+                clearInterval(timer);
+                goTop.style.display = 'none';
+            }
+        },30)
+    }
+
+    function show(ele){
+        ele.style.display = 'block'
+      }
+      
+      function hide(ele){
+        ele.style.display = 'none'
+      }
+        })
+    </script>
+</head>
+<body>
+    <!-- 头部导航的开始 -->
+        <div class="nav">
+                <div class="nav-list w clearfix">
+                    <ul class="clearfix">
+                        <li class="button"><a href="#">首页</a></li>
+                        <li class="button"><a href="#">作战咨询</a></li>
+                        <li class="button"><a href="#">角色介绍</a></li>
+                        <li class="button"><a href="#">游戏特色</a></li>
+                        <li  class="button"><a href="#">壁纸下载</a></li>                   
+                    </ul>
+                </div>       
+        
+        </div>
+<!--<div class="index">-->
+    <!--<div id="bottom_bg"></div>-->
+    <!--<div class="nav">-->
+        <!--<ul class=""nav-wrap>-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<span class="nav-btn">-->
+                        <!--<text>首页</text>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<span class="nav-btn">-->
+                        <!--<text>作战资讯</text>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<span class="nav-btn">-->
+                        <!--<text>角色介绍</text>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<span class="nav-btn">-->
+                        <!--<text>游戏特色</text>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<span class="nav-btn">-->
+                        <!--<text>壁纸下载</text>-->
+                    <!--</span>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+<!--</div>-->
+    <div id="main">
+        <div id="female_role"></div>
+        <div class="big_bg">
+            <div style="position:relative;">
+                <a id="back_link" href="../ljx-news.html">返回列表页>></a>
+            </div>
+            <ul id="news_nav_big" class="news-nav">
+                <li class="on">
+                    <a href="#">攻略</a>
+                </li>
+            </ul>
+            <img id="title_img_big" src="https://webstatic.bh3.com/www_bh3_com/news_image/uploads/1a80bc2054f622806057dd30e99c7111.jpeg">
+            <h2>新武器「超维☆奏鸣曲」加入精准补给！</h2>
+            <div class="create_time">2018-05-31 17:20</div>
+            <div class="content">
+                <p>
+                    <span style="font-size: 14px;">欢迎收看《爱酱的英魂殿》栏目，爱酱会在这里为舰长介绍圣痕的使用心得及搭配建议！</span></p><p><span style="font-size: 14px;">今天为舰长介绍的是将于5月25日精准补给中正式登场的2.3版本新圣痕——评论者套装：<span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章」</span>。</span><br></p><p><br></p><p style="text-align: center;"><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1527215357125234.jpg" title="1527215357125234.jpg" alt="2018.5.24.jpg"></p>
+                <p>
+                    <span style="font-size: 14px;"><br></span>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">一、圣痕介绍</span><br></p><p><span style="font-size: 14px;">*以下技能描述均为50级数据</span><br></p><p><br></p><p style="text-align: center;"><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1527215373762274.jpg" title="1527215373762274.jpg" alt="S4AZ_1.jpg"></p>
+                <p>
+                    <span style="font-size: 14px;"><br></span>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章（上）」</span><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">5★生命423 攻击109 防御55</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">【流转】战斗中防御力提高40%，青鸾结界中队友造成的全元素伤害提高15%（唯一生效）</span></p><p><br></p><p style="text-align: center;"><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1527215399146170.jpg" title="1527215399146170.jpg" alt="S4AZ_2.jpg"></p><p><br></p><p><span style="font-size: 14px;">「叶采章（中）」</span>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">5★生命519 防御177 会心7</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">【冰花】在场下，为队友提供15%的冰冻元素抵抗和15%的冰冻元素提高（唯一生效）。上场后，自身冰冻元素伤害提高35%</span>
+                </p>
+                <p><br>
+                </p>
+                <p style="text-align: center;">
+                    <img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1527215414884279.jpg" title="1527215414884279.jpg" alt="S4AZ_3.jpg"></p>
+                <p>
+                    <span style="font-size: 14px;"><br></span>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章（下）」</span><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">5★生命495 攻击45 防御111 会心9</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">【挥洒】攻击速度提高15%，青鸾结界中队友受到的全伤害降低25%（唯一生效）</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">2件套技能【青鸾结界】</span>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">攻击时创造持续6秒的青鸾结界（唯一生效），有9秒的冷却时间。处在青鸾结界中的友方造成的全元素伤害提高30%，敌方受到的全元素伤害提高10%</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">3件套技能【结界催化】</span>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">青鸾结界的持续时间增加3秒，队友在青鸾结界中获得寒冰守护效果，被敌人击中受到的伤害低于常数10和女武神等级的乘积时，只会受伤不会被打断。</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">二、圣痕简析</span><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章」圣痕的核心用法在于两件搭配触发元素增伤，定位为偏辅助型的圣痕。同时，「叶采章」在保证了元素增伤核心的情况下，可以通过上中/中下/上下/单中的选择搭配来应对不同的情况。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章（上）」</span><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);"><br></span>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">上位圣痕50级时提供40%防御，在防御类圣痕中数值不算高，但优点在于无启动条件，在无法维持连击和HP的高难度情况下表现更加稳定。</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">同时，配合两件套生效的技能：青鸾结界中使队友造成的全元素伤害提高15%，可以增强辅助效果（上+两件套最多可提升友方45%的全元素伤害）。在使用「叶采章」两件套进行元素辅助时上位是不错的选择，既可以提升友方主力输出角色的元素伤害，又可以在一定程度上提升辅助角色的生存（抗流血）能力。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章（中）」</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">中位圣痕50级时，角色在场下时将可以给队友提供15%的冰冻伤害减免&amp;15%冰冻伤害增强，上场后提供35%的冰冻伤害加成，在稀缺的冰伤加成圣痕中价值很高。一般来说中位的圣痕多为防御系或者物伤系的圣痕，而「叶采章（中）」则同时拥有了合格的增伤与不错的辅助功能。由于「叶采章（中）」的技能跟套装的青鸾结界没有关联，所以也推荐主力输出角色单件使用。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">同时，「叶采章（中）」可以配合「叶采章（上）」获得青鸾结界的强力辅助效果，场下给输出角色额外提供15%的冰伤加成可以用来辅助「御神装·勿忘」或「第六夜想曲」。辅助角色装备的话，空出来的下位圣痕还可以携带如「牛顿（下）」这样的强力辅助圣痕，或者「开普勒（下）」来提高生存。</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章（下）」</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">下位圣痕提升15%攻击速度，增幅少于常见的「普朗克（下）」以及「萧云·红（下）」，但是没有负面效果，对于需求一定攻速的角色，是一个备用选择。</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">配合两件套生效的青鸾结界中使队友受到的全伤害降低25%，适用于深渊环境下为队伍降低流血负担，上下搭配可以获得40%防御以及25%全伤害减免。对于主力输出角色的话则只生效25%的全伤害减免，胜在不需要占用输出角色的圣痕位。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章（下）」也可以与中位一起搭配，同时兼顾输出与防御。比如「次元边界突破」则可以选择「薛定谔（上）」+「叶采章」中下两件套的搭配，可以同时辅助输出、提高团队生存，并依靠「薛定谔（上）」提供伤害。</span>
+                </p>
+                <p><br>
+                </p>
+                <p style="text-align: center;"><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1527215566155472.jpg" title="1527215566155472.jpg" alt="叶叶叶.jpg"></p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章」2件套</span>
+                    <span style="font-size: 14px;">：核心技能，提供一个很大范围的元素加伤Buff，结界存在期间可以提高友方30%的全元素伤害，配合上位使用能达到45%的全元素伤害，并且给敌人附加10%元素易伤，在辅助圣痕中可以说相当优秀（为队友提供45%的全元素属性加伤让爱酱想到了莎士比亚套装！）。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">需要注意的是，角色移动至结界外高额的元素增伤就会失效，但青鸾结界的范围非常大，实际战斗中可以轻松让角色留在圈内。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">「叶采章」3件套</span>
+                    <span style="font-size: 14px;">：三件套技能效果是将青鸾结界的持续时间从高覆盖变成全覆盖，同时友方角色只要在结界内，受到一定程度的攻击将只受伤而不会有硬直，在一些场合会有奇效（一些联机关卡，比如世界BOSS之类的活动，可能存在输出环境较为恶劣的情况）。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(255, 192, 0);">三、圣痕使用建议</span><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(0, 176, 240);">★单件使用建议</span>
+                </p>
+                <p><br>
+                </p>
+                <p style="text-align: center;"><img src="https://webstatic.bh3.com/www_bh3_com/news_image/UE_Editor/1527215550373123.png" title="1527215550373123.png" alt="image.png"></p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章（中）」在场提供35%无条件冰伤，场下则是队友15%冰伤增幅和减免——单件适合提供给「御神装·勿忘」或「第六夜想曲」增加稳定冰伤，也可以给任意冰伤角色的辅助后台使用。给主力输出角色可以单独携带或搭配上位，给辅助角色推荐与上位或下位组合，触发青鸾结界的巨大加成。</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章（上）」提供战斗中40%防御力，「叶采章（下）」可以提供稳定15%攻速——常规情况下推荐两件套搭配使用。</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(0, 176, 240);">★两件套使用建议</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章」两件套的组合变化和用途极多，可根据不同场合和队伍进行选择。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">例如「银狼的黎明」或「圣女祈祷」选择「叶采章」上中两件套+「牛顿（下）」，或「叶采章」上下两件套+「芽衣·泳装派对（中）」辅助犹大体系；「融核装·深红」或「次元边界突破」选择「叶采章」上中两件套+「牛顿（下）」辅助「御神装·勿忘」或「影骑士·月轮」；深渊中「次元边界突破」也可以选择「薛定谔（上）」+「叶采章」中下两件套兼顾攻防。「御神装·勿忘」或「第六夜想曲」也可以将「叶采章」上中两件套+「莎士比亚（下）」作为输出配置，上中两件配套可视作有条件的80%冰伤与10%的元素易伤作为输出圣痕也是可行的。</span>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px; color: rgb(0, 176, 240);">★三件套使用建议</span><br>
+                </p>
+                <p><br>
+                </p>
+                <p>
+                    <span style="font-size: 14px;">「叶采章」三件套增强了青鸾结界的持续时间至9秒保证结界的全程覆盖，提供更流畅的输出环境以及在战斗中更强的续航，在一些特殊的场合会有不错的表现。</span>
+                </p>
+                <p><br>
+                </p>
+            </div>
+            <div class="page_contro1">
+                <a href="#"><< 上一篇</a>
+                <a class="pull-right">没有下一篇了</a>
+            </div>
+        </div>
+    </div>
+
+     <!-- 回到顶部 -->
+    <!-- <a href="#main" id="btn-top"><img src="images/back.png"></a> -->
+    <div class="actGotop" style="z-index: 11;">
+            <!-- <a href="#" title="返回顶部"></a> -->
+            <i></i>
+        </div>
+</body>
+</html>

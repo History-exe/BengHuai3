@@ -1,0 +1,485 @@
+/*初始化代码*/
+body,div,p,a,ul,li,ol,dl,span,input,img,h1,h2,h3,hr {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/100% '微软雅黑';
+}
+.wrap {
+    width: 960px;
+    margin: 0 auto;
+    height: 1000px;
+    position: relative;
+}
+hr {
+    border: 0px;
+    height: 5px;
+    background-color: #00c3ff;
+}
+input,img {
+    border: 0 none;
+    outline: 0 none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,li,ol {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.clearfix:after {
+    content: '.';
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    display: block;
+}
+.clearfix {
+    zoom: 1;
+}
+
+/*Main-nav的CSS代码*/
+.Main-nav {
+    height: 54px;
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    margin-left: -480px;
+    z-index: 999;
+}
+.Main-nav ul {
+    width: 630px;
+    margin: 0 auto;
+}
+.Main-nav ul>li {
+    width: 112px;
+    height: 55px;
+    border: 2px solid #00c3ff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    float: left;
+    background-color: rgba(28,55,118,.5);
+    border-radius: 10px;
+    transform: skewX(-10deg);
+    margin-left: 10px;
+}
+.Main-nav ul>li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transform: skewX(10deg);
+}
+.Main-nav ul>li:hover {
+    border-color: #ffc300;
+}
+.Main-nav ul>li:nth-child(4){
+    background-color: #00c3ff;
+}
+div.side-nav {
+    display: none;
+}
+
+div.side-nav ul.side_nav {
+    background: url("../Images/sidebg.png") no-repeat right 0;
+    padding-top: 82px;
+    width: 141px;
+    height: 517px;
+    position: fixed;
+    top: 20%;
+    z-index: 1000;
+}
+
+div.side-nav .side_nav li a {
+    float: left;
+    display: block;
+    width: 141px;
+    height: 36px;
+    line-height: 36px;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+}
+div.side-nav .side_nav li a:nth-child(1) {
+    margin-top: 5px;
+}
+
+div.side-nav .side_nav li a:hover {
+    color: #e57413;
+}
+
+    /*Features-top的CSS代码*/
+.Features-top,
+.Features-second,
+.Features-third {
+    overflow: hidden;
+    height: 1000px;
+    background: url("../Images/game_1_bg.jpg") no-repeat center;
+    position: relative;
+}
+
+
+
+.Features-top img,
+.Features-second img{
+    position: absolute;
+    height: 1000px;
+}
+
+.Features-top h1,
+.Features-second h1,
+.Features-third h1,
+.Features-fourth h1{
+    width: 900px;
+    height: 140px;
+    padding-left: 60px;
+    color: rgb(255,255,255);
+    font-size:56px;
+    line-height: 75px;
+    position: absolute;
+    left: 200px;
+    margin: 0 auto;
+    top: 110px;
+    transform: skewX(-10deg);
+    display: none;
+}
+
+.Features-top p.first-text,
+.Features-top p.second-text,
+.Features-top p.third-text {
+    width: 900px;
+    position: absolute;
+    left: 200px;
+    padding-left: 60px;
+    color: rgb(255,255,255);
+    font-size: 24px;
+    line-height: 24px;
+    top: 300px;
+    display: none;
+}
+.Features-top p.second-text {
+    top: 335px;
+}
+.Features-top p.third-text {
+    top: 370px;
+}
+
+/*Features-second的CSS代码*/
+.Features-second {
+    background: url("../Images/game_2_bg.jpg");
+    display: none;
+}
+.Features-second img {
+    left: 0;
+}
+
+.Features-second h1,
+.Features-third  h1,
+.Features-fourth h1 {
+    width: 960px;
+    top: 40px;
+    padding-left: 0;
+    text-align: center;
+}
+.second-inner p,
+.content p {
+    width: 960px;
+    position: absolute;
+    left: 200px;
+    top: 160px;
+    color: rgb(255,255,255);
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    display: none;
+}
+.second-inner p.second-text {
+    top: 200px;
+}
+.second-inner p.third-text  {
+    top: 240px;
+}
+.second-inner p.fourth-text {
+    top: 280px;
+}
+.second-inner p.fivth-text {
+    top: 360px;
+}
+.second-inner p.sixth-text {
+    top: 400px;
+}
+.second-inner p.seventh-text {
+    top: 440px;
+}
+.second-inner p.eighth-text {
+    top: 480px;
+}
+.second-inner span.tag {
+    color: #00c3ff;
+    font-weight: bold;
+}
+
+/*Features-third的CSS代码*/
+.Features-third {
+    background: url("../Images/game_3_bg.jpg");
+}
+.Features-third .third-inner {
+    width: 1024px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.third-inner ul {
+    width: 1024px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    /*display: none;*/
+}
+
+.third-inner ul>li {
+    width: 204.8px;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+}
+
+
+
+.Features-third  h1 {
+    top: 0;
+}
+
+.third-inner span.close-Btn {
+    position: absolute;
+    font-size: 36px;
+    color: #dedede;
+    width: 30px;
+    z-index: 998;
+    line-height: 30px;
+    right: 0;
+    top: 0;
+    display: none;
+    cursor: pointer;
+}
+
+
+.Features-third .content {
+    position: relative;
+    height: 500px;
+}
+
+.content p.first-text {
+    top: 120px;
+}
+.content p.second-text {
+    top: 200px;
+}
+.content p.third-text {
+    top: 240px;
+}
+.content p.fourth-text {
+    top: 280px;
+}
+.content div.role-link {
+    width: 744px;
+    height: 70px;
+    position: absolute;
+    background: url("../Images/game_button_blue.png") no-repeat ;
+    left: 400px;
+    top: 380px;
+    display: none;
+}
+.content div.role-link a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 26px;
+    font-size: 26px;
+    margin-top: 10px;
+    font-weight: bold;
+    /*line-height: 35px;*/
+}
+.content div.role-link span {
+    font-size: 16px;
+    line-height: 20px;
+    opacity: .4;
+}
+
+/*Features-fourth的CSS代码*/
+.Features-fourth {
+    overflow: hidden;
+    height: 886px;
+    background: url("../Images/game_5_bg.jpg");
+    position: relative;
+    /*display: none;*/
+}
+.Features-fourth h1 {
+    top: 650px;
+    left: 500px;
+}
+
+
+
+
+/*Features-footer的CSS代码*/
+.Features-footer {
+    background: black;
+    height: 250px;
+}
+.Features-footer div.footer-inner {
+    width: 100%;
+    height: 236.8px;
+    margin: 0 auto;
+}
+div.footer-inner p.first-text,
+div.footer-inner p.second-text,
+div.footer-inner p.third-text,
+div.footer-inner p.fourth-text,
+div.footer-inner p.fivth-text,
+div.footer-inner p.sixth-text,
+div.footer-inner p.seventh-text,
+div.footer-inner p.eighth-text {
+    position: absolute;
+    left: 440px;
+    top: 15px;
+    color: #999999;
+}
+
+div.footer-inner span.tag {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 5px;
+    color: #999999;
+}
+div.footer-inner ul {
+    position: absolute;
+    left: 440px;
+    top: 40px;
+}
+div.footer-inner ul>li {
+    float: left;
+    margin-left: 10px;
+    color: #999999;
+}
+div.footer-inner>span {
+    position: absolute;
+    font-size: 16px;
+    left: 440px;
+    top: 35px;
+}
+
+div.footer-inner ul>li a {
+    color: #999999;
+}
+div.footer-inner ul>li a:hover {
+    color: #dedede;
+}
+
+div.footer-inner p.second-text {
+    top: 55px;
+}
+div.footer-inner p.third-text {
+    top: 90px;
+}
+div.footer-inner p.fourth-text {
+    top: 110px;
+}
+div.footer-inner p.fourth-text img {
+    margin-right: 5px;
+}
+div.footer-inner p.fivth-text {
+    top: 135px;
+}
+div.footer-inner p.fivth-text img {
+    height: 22px;
+    margin-left: 5px;
+}
+div.footer-inner p.sixth-text {
+    top: 165px;
+}
+div.footer-inner p.seventh-text {
+    top: 190px;
+}
+div.footer-inner p.eighth-text {
+    top: 215px;
+}
+
+div.footer-inner ul.links {
+    position: absolute;
+    top: 215px;
+    left: 1000px;
+}
+
+div.Features-fivth {
+    height: 1005px;
+    background: url("../Images/mbg_05.jpg") no-repeat center;
+
+    overflow: hidden;
+}
+div.Features-fivth .fivth-inner {
+    width: 1100px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.fivth-inner .nav {
+    width: 670px;
+    height: auto;
+    position: absolute;
+    left: 215px;
+    top: 187px;
+    z-index: 20;
+}
+.fivth-inner .nav1 {
+    float: right;
+}
+.fivth-inner .nav2 {
+    float: left;
+    margin-top: 8px;
+}
+
+.fivth-inner .nav1 a,
+.fivth-inner .nav2 a {
+    display: inline-block;
+    width: 105px;
+    height: 40px;
+    background-color: #ffd100;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    transform: skewX(-10deg);
+}
+.fivth-inner .nav1 a:nth-child(1){
+    background-color: #fff;
+}
+.fivth-inner ul.con {
+    width: 1100px;
+    height: 770px;
+    position: absolute;
+    right: 50px;
+    top: 230px;
+    z-index: 1;
+    overflow: hidden;
+}
+.fivth-inner ul>li {
+    display: none;
+}
+.fivth-inner ul>li a {
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 160px;
+    top: 90px;
+}

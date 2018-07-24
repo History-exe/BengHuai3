@@ -1,0 +1,358 @@
+﻿*{margin:0; padding:0; box-sizing:border-box; font-family:Microsoft Yahei;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html,body{width:100%;font-size:20px;background:black;}
+table{ cellspacing:0; cellpadding:0;}
+section{position:relative; display:block; min-width:1024px; height:1000px; overflow: hidden;  max-width:1920px; margin:0 auto;}
+hr{border:0; background:#00c3ff; height:5px;}
+section .content-wrap{width:960px; position:relative; margin:0 auto;}
+section .section-fg{position:absolute; width:100%; height:100%; left:0; top:0;}
+nav{position:fixed; display:block; top:0; left:0; height:50px; padding:11px 0;}
+h1{font-size:2.8rem; transform: skew(-.15rad); text-shadow:1px 1px 5px rgba(0,0,0,0.1);}
+h2{transform: skew(-.15rad);}
+p{font-size:1.2rem; line-height:1.8rem; text-shadow:1px 1px 5px rgba(0,0,0,0.1);}
+a{text-decoration: none; color:inherit;}
+.center{text-align:center;}
+.keyword{color:#00c3ff; font-weight:600;}
+.button{height:70px; width:744px; padding:10px 0; cursor:pointer; text-align:center; transition:0.4s;}
+.button:hover{transform:scale(1.1,1.1) !important;}
+.button.blue{background:url(../fonts/b71a0a282614443ea23f316bfbcc8783.svg); 
+      -webkit-filter: blur(20px); 
+      -moz-filter: blur(20px); 
+      -ms-filter: blur(20px); 
+      filter: blur(20px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+    100%{
+      background-size:auto 100%; 
+      background-position-x:0;
+      background-position-y:0;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(0px); 
+      -moz-filter: blur(0px); 
+      -ms-filter: blur(0px); 
+      filter: blur(0px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+}
+@-o-keyframes bgfocus
+{
+    0%{
+      background-size:auto 130%; 
+      background-position-x:10%;
+      background-position-y:5%;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(20px); 
+      -moz-filter: blur(20px); 
+      -ms-filter: blur(20px); 
+      filter: blur(20px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+    100%{
+      background-size:auto 100%; 
+      background-position-x:0;
+      background-position-y:0;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(0px); 
+      -moz-filter: blur(0px); 
+      -ms-filter: blur(0px); 
+      filter: blur(0px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+}
+@-moz-keyframes bgfocus
+{
+    0%{
+      background-size:auto 130%; 
+      background-position-x:10%;
+      background-position-y:5%;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(20px); 
+      -moz-filter: blur(20px); 
+      -ms-filter: blur(20px); 
+      filter: blur(20px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+    100%{
+      background-size:auto 100%; 
+      background-position-x:0;
+      background-position-y:0;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(0px); 
+      -moz-filter: blur(0px); 
+      -ms-filter: blur(0px); 
+      filter: blur(0px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+}
+@-webkit-keyframes bgfocus
+{
+    0%{
+      background-size:auto 130%; 
+      background-position-x:10%;
+      background-position-y:5%;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(20px); 
+      -moz-filter: blur(20px); 
+      -ms-filter: blur(20px); 
+      filter: blur(20px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+    100%{
+      background-size:auto 100%; 
+      background-position-x:0;
+      background-position-y:0;
+      filter: url(../fonts/blur.svg); 
+      -webkit-filter: blur(0px); 
+      -moz-filter: blur(0px); 
+      -ms-filter: blur(0px); 
+      filter: blur(0px); 
+      filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+    }
+}
+.blur { 
+  filter: url(../fonts/blur.svg); 
+  -webkit-filter: blur(20px); 
+  -moz-filter: blur(20px); 
+  -ms-filter: blur(20px); 
+  filter: blur(20px); 
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=50, MakeShadow=false);
+} 
+
+.stonefloating{
+  animation: stonefloating 20s linear 0s infinite forwards;
+  -moz-animation: stonefloating 20s linear 0s infinite forwards;
+  -webkit-animation: stonefloating 20s linear 0s infinite forwards;
+  -o-animation: stonefloating 20s linear 0s infinite forwards;
+}
+
+@keyframes stonefloating {
+    0%{
+        transform: rotate(-1deg) translate(30px,0);
+    }
+    50%{
+        transform: rotate(1deg) translate(-30px,-10px);
+    }
+    100%{
+        transform: rotate(-1deg) translate(30px,0);
+    }   
+}
+@-webkit-keyframes stonefloating {
+    0%{
+        -webkit-transform: rotate(-1deg) translate(30px,0);
+    }
+    50%{
+        -webkit-transform: rotate(1deg) translate(-30px,-10px);
+    }
+    100%{
+        -webkit-transform: rotate(-1deg) translate(30px,0);
+    }   
+}
+@-moz-keyframes stonefloating {
+    0%{
+        -moz-transform: rotate(-1deg) translate(30px,0);
+    }
+    50%{
+        -moz-transform: rotate(1deg) translate(-30px,-10px);
+    }
+    100%{
+        -moz-transform: rotate(-1deg) translate(30px,0);
+    }    
+}
+@-o-keyframes stonefloating {
+    0%{
+        -o-transform: rotate(-1deg) translate(30px,0)
+    }
+    50%{
+        -o-transform: rotate(1deg) translate(-30px,-10px)
+    }
+    100%{
+        -o-transform: rotate(-1deg) translate(30px,0)
+    }   
+}
+
+.blink-1{
+  animation: blink 3s linear 0s infinite forwards;
+  -moz-animation: blink 3s linear 0s infinite forwards;
+  -webkit-animation: blink 3s linear 0s infinite forwards;
+  -o-animation: blink 3s linear 0s infinite forwards;
+}
+.blink-2{
+  animation: blink 3s linear 1s infinite forwards;
+  -moz-animation: blink 3s linear 1s infinite forwards;
+  -webkit-animation: blink 3s linear 1s infinite forwards;
+  -o-animation: blink 3s linear 1s infinite forwards;
+}
+.blink-3{
+  animation: blink 3s linear 2s infinite forwards;
+  -moz-animation: blink 3s linear 2s infinite forwards;
+  -webkit-animation: blink 3s linear 2s infinite forwards;
+  -o-animation: blink 3s linear 2s infinite forwards;
+}
+
+@keyframes blink {
+    10%{opacity:0.2;}
+    50%{opacity:0.5;}
+    90%{opacity:0.2;}   
+}
+@-webkit-keyframes blink {
+    10%{opacity:0.2;}
+    50%{opacity:0.5;}
+    90%{opacity:0.2;}  
+}
+@-moz-keyframes blink {
+    10%{opacity:0.2;}
+    50%{opacity:0.5;}
+    90%{opacity:0.2;}   
+}
+@-o-keyframes blink {
+    10%{opacity:0.2;}
+    50%{opacity:0.5;}
+    90%{opacity:0.2;}  
+}
+
+.neonlight{
+  animation: neonlight 0.5s linear 0s infinite forwards;
+  -moz-animation: neonlight 0.5s linear 0s infinite forwards;
+  -webkit-animation: neonlight 0.5s linear 0s infinite forwards;
+  -o-animation: neonlight 0.5s linear 0s infinite forwards;
+}
+@keyframes neonlight {
+    0%{background-position-x:100%;}
+    100%{background-position-x:0;}
+}
+@-webkit-keyframes neonlight {
+    0%{background-position-x:100%;}
+    100%{background-position-x:0;}
+}
+@-moz-keyframes neonlight {
+    0%{background-position-x:100%;}
+    100%{background-position-x:0;}
+}
+@-o-keyframes neonlight {
+    0%{background-position-x:100%;}
+    100%{background-position-x:0;}
+}
+
+.contact-layer{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:9999;
+  display:none;
+}
+.contact-layer .contact-wrap{
+  position:absolute;
+  width:800px;
+  height:500px;
+  left:50%;
+  top:50%;
+  margin-left:-400px;
+  margin-top:-250px;
+  border-radius:10px;
+  background:rgba(255,255,255,0.9);
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+  text-align:center;
+  padding:20px;
+}
+.contact-layer .contact-wrap h1{font-size:40px; color:#00c3ff; transform:none;text-align:center}
+.contact-layer .contact-wrap p{font-size:18px;text-align:left;padding:5px 0; }
+.arrowrright{width:12px; height:14px; background:url("../images/arrow.png")no-repeat; background-position-x:0; display:inline-block; vertical-align: middle; margin:0 5px;}
+
+.arrowrleft{width:12px; height:14px; background:url("../images/arrow.png") no-repeat; background-position-x:-12px; display:inline-block; vertical-align: middle; margin:0 5px;}
+#code{position:relative;}
+#code canvas{ padding:12px; background:white;}
+#pre-register-link{
+    display: none;
+    padding: 8px 10px;
+    font-size:18px;
+    width: 226px;
+    text-align: center;
+    margin: 16px auto;
+    border-radius: 10px;
+    background: #00c3ff;
+    color: white;
+}
+.nav{
+    position: fixed;
+    top:16px;
+    left:0;
+    width:100%;
+    min-width:1024px;
+    z-index:1000;
+    font-size: 18px;
+  }
+  ul.nav-wrap{
+    position:relative;
+    width: 960px;
+    margin:0 auto;
+    text-align: center;
+    white-space: nowrap;
+  }
+  ul.nav-wrap li{
+    list-style:none;
+    display:inline-block;
+    width:12.5%;
+  }
+  ul.nav-wrap li .nav-btn{
+    display:block;
+    text-align:center;
+    width:95%;
+    height:50px;
+    color:white;
+    border:2px solid #00c3ff;
+    background: rgba(0,0,0,0.25);
+    border-radius:10px;
+    transform:skew(-10deg);
+    line-height:50px;
+    box-sizing: content-box;
+    transition: 0.3s;
+  }
+  ul.nav-wrap li .nav-btn:hover{
+    border:2px solid #ffc300;}
+  
+  ul.nav-wrap li .nav-btn.active{
+    background:#00c3ff;
+    color:black;
+  }
+  
+  ul.nav-wrap li .nav-btn text{
+    display:block;
+    transform:skew(10deg);}
+
+.news-nav {
+  clear: both;
+  border-bottom: 1px solid #4b869f;
+  height: 58px;
+}
+.news-nav li {
+  float: left;
+  list-style-type: none;
+  
+}
+.news-nav li a {
+  display: block;
+  width: 86px;
+  height: 57px;
+  text-align: center;
+  line-height: 57px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+}
+.news-nav li.on a {
+  color: #74dcff;
+  background-color: #3e4963;
+  border-bottom-color: #74dcff;
+}
+.news-nav li a:hover {
+  color: #74dcff;
+}
+
+.no-content {
+  color: rgba(255,255,255,0.4);
+  font-size: 50px;
+  text-align: center;
+  padding: 91px 0;
+}

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords">
+    <meta name="description">
+    <title>新闻资讯</title>
+    <!-- 导航样式 -->
+    <style>
+        .button {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            /* position: absolute; */
+            /* font-size: 1.5em; */
+            text-transform: uppercase;
+            /* padding: 7px 20px; */
+            /* left: 50%; */
+            /* width: 200px; */
+            /* margin-left: -100px;
+            top: 50%; */
+            border-radius: 10px;
+            color: white;
+            text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+            border: 5px solid transparent;
+            /* border-bottom-color: rgba(0,0,0,0.35); */
+            /* background: hsla(260, 100%, 50%, 1); */
+            cursor: pointer;
+        
+            animation: pulse 1s infinite alternate;
+            transition: background 0.4s, border 0.2s, margin 0.2s;
+        }
+        .button:hover {
+            /* background: hsla(220, 100%, 60%, 1); */
+            margin-top: -1px;
+        
+            animation: none;
+        }
+        .button:active {
+            border-bottom-width: 0;
+            margin-top: 5px;
+        }
+        @keyframes pulse {
+            0% {
+                margin-top: 0px;
+            }
+            100% {
+                margin-top: 6px; 
+            } 
+        }
+    </style>
+    <link rel="stylesheet" href="ljx-news.css">
+
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+
+    
+    <script src='jquery-1.12.4.js'></script>
+    <script src='ljx-news.js'></script>
+    
+    
+    <script src="common.js"></script>
+    <!-- 雪花飘落 -->
+    <script type="text/javascript" src="雪花飘落动画效果/js/jquery.js"></script>
+    <script type="text/javascript" src="雪花飘落动画效果/js/three.js"></script>
+   
+    
+</head>
+<body>
+    <!--底部背景-->
+    <div id="bottom_bg"></div>
+
+    <!--主页面-->
+    <div id="main">
+    
+        
+        <!--女性角色-->
+        <div class="female-role p1 show">
+            <img src="images/theresa_c4.png" alt="">
+        </div>
+        <div class="female-role p2">
+            <img src="images/kallen_c3.png" alt="">
+        </div>
+        <div class="female-role p3">
+            <img src="images/bronya_c2.png" alt="">
+        </div>
+        <div class="female-role p4">
+            <img src="images/sakura_c3.png" alt="">
+        </div>
+        <!-- 触发按钮 -->
+        <div class="btn" style="z-index: 10;">
+            <img src="images/kallen_c3_skill_4.png" alt="">
+        </div>
+
+
+
+
+        <div class="big_bg w">
+            <ul class="news-nav">
+                <li class="active"><a href="#">最新</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">公告</a></li>
+                <li><a href="#">活动</a></li>
+                <li><a href="#">攻略</a></li>
+            </ul>
+            <!--最新-->
+            <ul class="news_list selected">
+                <li>
+                    <a href="项目mhj\strategy1.html">
+                        <img src="images/23a11f4d58db98fcfc250047bc401ec0.png">
+                        <h3>新武器「超维☆奏鸣曲」加入精准补给！</h3>
+                        <div>发布日期：2018-05-31</div>
+                        <div class="summary">Dimension☆Sonata（超维☆奏鸣曲），被天命魔导士教会所封印的最高等魔法道具之一。因为一次偶然的事故与魔法少女TeRiRi缔结下契约，并与她一起开始了冒险之旅。「超维☆奏鸣曲」拥有辅助提高元素伤害、增加爆发全伤害的特性，其主动技【精灵之歌】也有用高额的火焰元素伤害，非常契合樱火轮舞、神恩颂歌这两位女武神的特性。同时「妖刀·赤染樱」、「绯玉丸」也非常适合其他火焰系的女武神使用。「绯玉丸」在本期精准补给开始时将同时进入许愿池。======UP时间======活动期间内，所有装备均有一定概率获取；指定装备UP时间内，该装备的获取概率提升！※本次活动中，指定武器/圣痕在UP时间内，相比同星级的武器/圣痕，UP武器/圣痕的获取概率更高※指定武器/圣痕在UP时间外，相比同星级的非UP武器/圣痕，其获取概率完全一致（即该装备在非UP时间段内，其获取概率不为0）※有关详细的指定装备的获取概率信息，请参照当期补给详情界面末尾的【概率详情】※许愿池详细规则，请在精准补给页面进入【许愿池】系统查看======补给内容======【★4武器】双枪：原型·妖精之弓太刀：3rd圣遗物 | 妖刀·赤染樱重炮：5th圣遗物大剑：7th圣遗物十字架：超维☆奏鸣曲拳套：百鸟问天【★4圣痕】远古意志套装：绯玉丸（上、中、下）天命主教套装：奥托·阿波卡利斯（上、中、下）远古匠造套装：丹朱（上、中、下）神恩颂歌套装：卡莲·颂歌（上、中、下）人偶师套装：丹朱·人偶师（上、中、下）======精准说明======1）使用精准补给可能获得★2-★4武器与圣痕、装备经验材料、通用进化材料、吼姆宝藏。2）每十回精准补给内必出一件★4武器或★4圣痕。3）活动期间，使用精准补给可获得的★4装备必定为补给内容中所列出★4装备，不会出现所列内容外的★4装备。4）舰长达到9级或9级以上，在【补给】界面就会出现【精准补给】这一通道。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="项目mhj\strategy2.html">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封号名单（2018年5月30日）</h3>
+                        <div>发布日期：2018-05-30</div>
+                        <div class="summary">2018年5月30日使用外挂封禁名单，共计1273人。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/f01fa290e29e2d4eaadc3f1bedf965e3.jpeg">
+                        <h3>爱酱的英魂殿 | 「叶采章」</h3>
+                        <div>发布日期：2018-05-25</div>
+                        <div class="summary">4★圣痕「叶采章」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/d52e1df47a2780bed8bee6694c768f3b.png">
+                        <h3>全新圣痕「叶采章」即将加入精准补给</h3>
+                        <div>发布日期：2018-05-24</div>
+                        <div class="summary">「叶采章」是一套特化了元素辅助能力和防御能力的圣痕，可以大大提升各类元素系女武神的输出能力和生存能力。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/9231637de7a00b93fa40728650df2f59.png">
+                        <h3>吼姆乐园，梦幻开启！</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">一封神秘的邀请函和无数门票寄到了圣芙蕾雅学园，邀请她们光临不可思议的吼姆乐园。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/0f7f168ea256b8eb4e217285c0274a31.png">
+                        <h3>【律者档案】极限挑战开启！</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">在天命总部的赫尔海姆实验室中，奥托展开了一项秘密的实验。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封禁名单（2018年5月23日）</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">2018年5月23日使用外挂封禁名单，共计1790名。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/53b5ffc1c8297d5a29c484216020f245.jpeg">
+                        <h3>爱酱军械库 | 「永暮双狼」</h3>
+                        <div>发布日期：2018-05-17</div>
+                        <div class="summary">4★拳套武器「永暮双狼」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/7a09ea5eea54f8a5c27bfd404d5d28cf.jpeg">
+                        <h3>「第六夜想曲」攻略 | 你的心，就由我收下了</h3>
+                        <div>发布日期：2018-05-16</div>
+                        <div class="summary">卡莲S级装甲「第六夜想曲」作战攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/43b79d203893cd5f8c1c60b2cf6bd859.png">
+                        <h3>5月12日商店异常的补偿及处理说明</h3>
+                        <div>发布日期：2018-05-12</div>
+                        <div class="summary">2018年5月12日关于商店异常兑换的补偿及处理说明。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+            <!--新闻-->
+            <ul class="news_list">
+                <li>
+                    <a href="项目mhj\strategy2.html">
+                        <img src="images/23a11f4d58db98fcfc250047bc401ec0.png">
+                        <h3>新武器「超维☆奏鸣曲」加入精准补给！</h3>
+                        <div>发布日期：2018-05-31</div>
+                        <div class="summary">Dimension☆Sonata（超维☆奏鸣曲），被天命魔导士教会所封印的最高等魔法道具之一。因为一次偶然的事故与魔法少女TeRiRi缔结下契约，并与她一起开始了冒险之旅。「超维☆奏鸣曲」拥有辅助提高元素伤害、增加爆发全伤害的特性，其主动技【精灵之歌】也有用高额的火焰元素伤害，非常契合樱火轮舞、神恩颂歌这两位女武神的特性。同时「妖刀·赤染樱」、「绯玉丸」也非常适合其他火焰系的女武神使用。「绯玉丸」在本期精准补给开始时将同时进入许愿池。======UP时间======活动期间内，所有装备均有一定概率获取；指定装备UP时间内，该装备的获取概率提升！※本次活动中，指定武器/圣痕在UP时间内，相比同星级的武器/圣痕，UP武器/圣痕的获取概率更高※指定武器/圣痕在UP时间外，相比同星级的非UP武器/圣痕，其获取概率完全一致（即该装备在非UP时间段内，其获取概率不为0）※有关详细的指定装备的获取概率信息，请参照当期补给详情界面末尾的【概率详情】※许愿池详细规则，请在精准补给页面进入【许愿池】系统查看======补给内容======【★4武器】双枪：原型·妖精之弓太刀：3rd圣遗物 | 妖刀·赤染樱重炮：5th圣遗物大剑：7th圣遗物十字架：超维☆奏鸣曲拳套：百鸟问天【★4圣痕】远古意志套装：绯玉丸（上、中、下）天命主教套装：奥托·阿波卡利斯（上、中、下）远古匠造套装：丹朱（上、中、下）神恩颂歌套装：卡莲·颂歌（上、中、下）人偶师套装：丹朱·人偶师（上、中、下）======精准说明======1）使用精准补给可能获得★2-★4武器与圣痕、装备经验材料、通用进化材料、吼姆宝藏。2）每十回精准补给内必出一件★4武器或★4圣痕。3）活动期间，使用精准补给可获得的★4装备必定为补给内容中所列出★4装备，不会出现所列内容外的★4装备。4）舰长达到9级或9级以上，在【补给】界面就会出现【精准补给】这一通道。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="项目mhj\strategy2.html">
+                        <img src="images/d52e1df47a2780bed8bee6694c768f3b.png">
+                        <h3>全新圣痕「叶采章」即将加入精准补给</h3>
+                        <div>发布日期：2018-05-24</div>
+                        <div class="summary">「叶采章」是一套特化了元素辅助能力和防御能力的圣痕，可以大大提升各类元素系女武神的输出能力和生存能力。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/9231637de7a00b93fa40728650df2f59.png">
+                        <h3>吼姆乐园，梦幻开启！</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">一封神秘的邀请函和无数门票寄到了圣芙蕾雅学园，邀请她们光临不可思议的吼姆乐园。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/0f7f168ea256b8eb4e217285c0274a31.png">
+                        <h3>【律者档案】极限挑战开启！</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">在天命总部的赫尔海姆实验室中，奥托展开了一项秘密的实验。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/23a11f4d58db98fcfc250047bc401ec0.png">
+                        <h3>精准目标：幽色咏叹调、5th圣遗物、浓姬</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">曾经存放在天命圣1504研究所最下层的神秘武器「幽色咏叹调」初次展露身姿!</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/1625fd0b98976624a997b4e6a213e210.png">
+                        <h3>白夜执事、第六夜想曲扩充补给开启</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">通过本期扩充补获得「白夜执行」角色卡，「第六夜想曲」角色卡的概率提升。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/df1657056fd72c682823ee6e6554bbde.png">
+                        <h3>【怪盗降临】累计消耗水晶送S卡莲灵魂</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">累计消耗3万水晶即可解锁怪盗卡莲——S级灵魂觉醒女武神「第六夜想曲」！</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/da36d498771a0c956522ee1579b19744.png">
+                        <h3>祈愿之地5月11日11:00开放！</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">祈愿之地是一次性的福利系统，每位舰长均可享受一次自选初始S级角色卡（月光、鬼铠、次元三选一）的机会~</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/df2a6b20b8071c98aa5f42df335fc374.jpeg">
+                        <h3>【女王降临 】主线剧情第八章开放</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">主线剧情关卡——第八章「女王降临」Act1开放！指挥官等级达到30级即可直接开始第八章普通难度！</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/ad0b8ccf7b1098207aeb758c0f8ef860.png">
+                        <h3>【全境突袭】向天命全面宣战</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">进攻天命的号角已经响起,联合军将对目标战场的所有区域同时发动突袭。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+            <!--公告-->
+            <ul class="news_list">
+                <li>
+                    <a href="项目mhj\strategy1.html">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封号名单（2018年5月30日）</h3>
+                        <div>发布日期：2018-05-30</div>
+                        <div class="summary">2018年5月30日使用外挂封禁名单，共计1273人。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="项目mhj\strategy1.html">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封号名单（2018年5月23日）</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">2018年5月23日使用外挂封禁名单，共计1790人。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/43b79d203893cd5f8c1c60b2cf6bd859.png">
+                        <h3>5月12日商店异常的补偿及处理说明</h3>
+                        <div>发布日期：2018-05-12</div>
+                        <div class="summary">5月12日关于商店异常兑换的补偿及处理说明</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a5d0d0ffb9a0a380b1347fb391274c58%20(1).png">
+                        <h3>【天命之战】2.3版本更新公告</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">欢迎来到《崩坏3》2.3版本——「天命之战」！</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/43b79d203893cd5f8c1c60b2cf6bd859.png">
+                        <h3>萃取、重载活动常见疑问解答</h3>
+                        <div>发布日期：2018-05-10</div>
+                        <div class="summary">雷刀·鬼角和开天剑的萃取、重载活动将在5月11日中午11:00开启，预计6月21日结束。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/bc70c798a64cec051a9b061bf733c8e2.png">
+                        <h3>5月10日版本更新维护通知</h3>
+                        <div>发布日期：2018-05-09</div>
+                        <div class="summary">为了给舰长更好的游戏体验，休伯利安号将在5月10日进行版本更新维护。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封禁名单（2018年5月2日）</h3>
+                        <div>发布日期：2018-05-02</div>
+                        <div class="summary">本次对共计2067名违规使用外挂人员进行封禁。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/b7a8ac2482e9209022272035fbd77f08.png">
+                        <h3>【夺回水晶的战争】入侵米哈游</h3>
+                        <div>发布日期：2018-04-19</div>
+                        <div class="summary">和我一起入侵米哈游，把水晶从策划手中夺回来！</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/de74225d67b4067634ec2e6af5fc1a70.png">
+                        <h3>新圣痕「莫奈」加入精准补给！</h3>
+                        <div>发布日期：2018-04-19</div>
+                        <div class="summary">绘画者套装「莫奈」加入精准补给！</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封号名单(2018年4月18日)</h3>
+                        <div>发布日期：2018-04-18</div>
+                        <div class="summary">2018年4月18日使用外挂封禁名单,共计1192名。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+            <!--活动-->
+            <ul class="news_list">
+                <li>
+                    <a href="项目mhj\strategy2.html">
+                        <img src="images/d7b8076813915acd340b67d8a360c55c.jpeg">
+                        <h3>考试祭 | 迦尼萨的再袭</h3>
+                        <div>发布日期：2017-02-17</div>
+                        <div class="summary">考试祭 | 迦尼萨的再袭</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="项目mhj\strategy2.html">
+                        <img src="images/95ae2c0ef11a05ca7af2e2fa38e2472d.jpeg">
+                        <h3>圣诞小镇系列任务活动预告</h3>
+                        <div>发布日期：2016-12-22</div>
+                        <div class="summary"></div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/3a69f259e52747d5afc124d4227cbfe6.jpeg">
+                        <h3>预登录活动奖励确认中</h3>
+                        <div>发布日期：2016-08-09</div>
+                        <div class="summary">预登录活动开启,限定福利绝赞放送中!</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a270a78c835d71777fbe8374a98fb43b.png">
+                        <h3>《崩坏AI娘爱酱绝对不会告诉玩家的事实》事前条漫连载中</h3>
+                        <div>发布日期：2016-07-04</div>
+                        <div class="summary">休伯利安号战舰AI娘,第一人气偶像爱酱,竟然是使得游戏迟迟不能公测的幕后黑手?!</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/9231637de7a00b93fa40728650df2f59.png">
+                        <h3>吼姆乐园，梦幻开启！</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">一封神秘的邀请函和无数门票寄到了圣芙蕾雅学园，邀请她们光临不可思议的吼姆乐园。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/0f7f168ea256b8eb4e217285c0274a31.png">
+                        <h3>【律者档案】极限挑战开启！</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">在天命总部的赫尔海姆实验室中，奥托展开了一项秘密的实验。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a3ebed81ea3b1269f872546cb1d9f4af.png">
+                        <h3>封禁名单（2018年5月23日）</h3>
+                        <div>发布日期：2018-05-23</div>
+                        <div class="summary">2018年5月23日使用外挂封禁名单，共计1790名。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/53b5ffc1c8297d5a29c484216020f245.jpeg">
+                        <h3>爱酱军械库 | 「永暮双狼」</h3>
+                        <div>发布日期：2018-05-17</div>
+                        <div class="summary">4★拳套武器「永暮双狼」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/7a09ea5eea54f8a5c27bfd404d5d28cf.jpeg">
+                        <h3>「第六夜想曲」攻略 | 你的心，就由我收下了</h3>
+                        <div>发布日期：2018-05-16</div>
+                        <div class="summary">卡莲S级装甲「第六夜想曲」作战攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/43b79d203893cd5f8c1c60b2cf6bd859.png">
+                        <h3>5月12日商店异常的补偿及处理说明</h3>
+                        <div>发布日期：2018-05-12</div>
+                        <div class="summary">2018年5月12日关于商店异常兑换的补偿及处理说明。</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+            <!--攻略-->
+            <ul class="news_list">
+                <li>
+                    <a href="项目mhj\strategy2.html">
+                        <img src="images/f01fa290e29e2d4eaadc3f1bedf965e3.jpeg">
+                        <h3>爱酱的英魂殿 | 「叶采章」</h3>
+                        <div>发布日期：2018-05-25</div>
+                        <div class="summary">4★圣痕「叶采章」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="项目mhj\strategy1.html">
+                        <img src="images/53b5ffc1c8297d5a29c484216020f245.jpeg">
+                        <h3>爱酱军械库 | 「永暮双狼」</h3>
+                        <div>发布日期：2018-05-17</div>
+                        <div class="summary">4★拳套武器「永暮双狼」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/7a09ea5eea54f8a5c27bfd404d5d28cf.jpeg">
+                        <h3>「第六夜想曲」攻略 | 你的心，就由我收下了</h3>
+                        <div>发布日期：2018-05-16</div>
+                        <div class="summary">卡莲S级装甲「第六夜想曲」作战攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a6885d5e1b1914a993c4ebdd710b5c22.jpeg">
+                        <h3>爱酱军械库 | 「幽色咏叹调」</h3>
+                        <div>发布日期：2018-05-11</div>
+                        <div class="summary">4★双枪「幽色咏叹调」使用指南</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/95042edecf0c93783a7c9f0790446d78.jpeg">
+                        <h3>爱酱的英魂殿 | 「莫奈」</h3>
+                        <div>发布日期：2018-04-19</div>
+                        <div class="summary">4★圣痕「莫奈」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/357e3d280b252c90b087b0890c858d7c.jpeg">
+                        <h3>爱酱的军械库 | 「虚无之刃」</h3>
+                        <div>发布日期：2018-04-11</div>
+                        <div class="summary">4★太刀「虚无之刃」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/a4aacee3f444f8e465686e733fabaac0.jpeg">
+                        <h3>「炽翎」攻略 | 赤焰丹心</h3>
+                        <div>发布日期：2018-03-30</div>
+                        <div class="summary">符华S级装甲「炽翎」攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/51b926ccdd3f11b5de75a04412ffe601.jpeg">
+                        <h3>爱酱军械库 | 「残火之鸢」</h3>
+                        <div>发布日期：2018-03-30</div>
+                        <div class="summary">4★拳套武器「残火之鸢」使用攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/3a7dca9fdcc307cd90893b77ba97e091.jpeg">
+                        <h3>爱酱的英魂殿 | 「丹朱·人偶师」</h3>
+                        <div>发布日期：2018-03-23</div>
+                        <div class="summary">4★圣痕「丹朱·人偶师」攻略指南</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/73ed1c0a450e17f281a9137b34659fae.jpeg">
+                        <h3>爱酱的英魂殿 | 「薛定谔·乐队」</h3>
+                        <div>发布日期：2018-03-08</div>
+                        <div class="summary">4★圣痕「薛定谔·乐队」实战攻略</div>
+                    </a>
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+
+            <!-- 更多新闻的html代码 -->
+            <div class="more_button_text">
+                <div id="more_news">
+                    
+                   
+
+                    <div class="yellow">
+                        <a href="#">
+                            <span>载入中</span>	
+                            <span>loading</span>
+                        </a>
+                    </div>
+
+                    <div class="yellow yellowTop">
+                        <a href="#">
+                            <span class="moreNews">更多新闻</span>	
+                            <span>GET MORE INFORMATION</span>
+                        </a>   
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- 回到顶部 -->
+    <!-- <a href="#main" id="btn-top"><img src="images/back.png"></a> -->
+    <div class="actGotop" style="z-index: 11;">
+        <!-- <a href="#" title="返回顶部"></a> -->
+        <i></i>
+    </div>
+
+    <!-- 雪花飘落 -->
+    <script type="text/javascript">
+        document.writeln("<div class=\"snow\" style=\"height:1200px;   position:fixed; left:0px; top:0px; right:0px; bottom:0px; pointer-events: none;z-index: 9999;\"><canvas width=\"1904\" height=\"913\" style=\"position: absolute;left: 0;top: 0;\"></canvas></div>");
+        
+        $(function() {
+        
+        if (/MSIE 6|MSIE 7|MSIE 8/.test(navigator.userAgent)) {
+        return
+        }
+        var container = document.querySelector(".snow");
+        // IE9-10 pointer-events兼容
+        if (/MSIE 9|MSIE 10/.test(navigator.userAgent)) {
+        $(container).bind('click mousemove', function(evt) {
+        this.style.display = 'none';
+        var x = evt.pageX, y = evt.pageY
+        if ($(document).scrollTop() > 0 || $(document).scrollTop() > 0) {
+        x = x - $(document).scrollLeft() + 1
+        y = y - $(document).scrollTop() + 1
+        }
+        evt.preventDefault();
+        evt.stopPropagation();
+        var under = document.elementFromPoint(x, y);
+        var evtType = evt.type === 'click' ? 'click' : 'mouseenter'
+        if (evt.type === 'click') {
+        $(under)[0].click();
+        } else {
+        $(under).trigger('mouseenter');
+        }
+        $('body').css('cursor', 'default')
+        this.style.display = '';
+        return false;
+        });
+        }
+        var containerWidth = $(container).width();
+        var containerHeight = $(container).height();
+        var particle;
+        var camera;
+        var scene;
+        var renderer;
+        var mouseX = 0;
+        var mouseY = 0;
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+        var particles = [];
+        var particleImages = [new Image(),new Image(),new Image(),new Image(),new Image()];
+        // particleImages[0].src = "./images/snow1.png";
+        // particleImages[1].src = "./images/snow2.png";
+        // particleImages[2].src = "./images/snow3.png";
+        // particleImages[3].src = "./images/snow4.png";
+        // particleImages[4].src = "./images/snow5.png";
+        particleImages[0].src = "img/151375665240370100.png";
+        particleImages[1].src = "img/151375668550091372.png";
+        particleImages[2].src = "img/151375669416355455.png";
+        particleImages[3].src = "img/151375670204115466.png";
+        particleImages[4].src = "img/151375671039447316.png";
+        var snowNum = 300;
+        function init() {
+        camera = new THREE.PerspectiveCamera(75, containerWidth / containerHeight, 1, 10000);
+        camera.position.z = 1000;
+        scene = new THREE.Scene();
+        scene.add(camera);
+        renderer = new THREE.CanvasRenderer();
+        renderer.setSize(containerWidth, containerHeight);
+        for (var i = 0; i < snowNum; i++) {
+        var material = new THREE.ParticleBasicMaterial({ map: new THREE.Texture(particleImages[i % 5]) });
+        particle = new Particle3D(material);
+        particle.position.x = Math.random() * 2000 - 1000;
+        particle.position.y = Math.random() * 2000 - 1000;
+        particle.position.z = Math.random() * 2000 - 1000;
+        particle.scale.x = particle.scale.y = 1;
+        scene.add(particle);
+        particles.push(particle)
+        }
+        container.appendChild(renderer.domElement);
+        document.addEventListener("mousemove", onDocumentMouseMove, false);
+        document.addEventListener("touchstart", onDocumentTouchStart, false);
+        document.addEventListener("touchmove", onDocumentTouchMove, false);
+        setInterval(loop, 1000 / 50)
+        }
+        function onDocumentMouseMove(event) {
+        mouseX = event.clientX - windowHalfX;
+        mouseY = event.clientY - windowHalfY
+        }
+        function onDocumentTouchStart(event) {
+        if (event.touches.length === 1) {
+        event.preventDefault();
+        mouseX = event.touches[0].pageX - windowHalfX;
+        mouseY = event.touches[0].pageY - windowHalfY
+        }
+        }
+        function onDocumentTouchMove(event) {
+        if (event.touches.length === 1) {
+        event.preventDefault();
+        mouseX = event.touches[0].pageX - windowHalfX;
+        mouseY = event.touches[0].pageY - windowHalfY
+        }
+        }
+        function loop() {
+        for (var i = 0; i < particles.length; i++) {
+        var particle = particles[i];
+        // 滚动到楼层模块，减少雪花 （自定义）
+        if ($(window).scrollTop() < 1000) {
+        particle.scale.x = particle.scale.y = 1;
+        } else {
+        if (i > particles.length / 5 * 3) {
+        particle.scale.x = particle.scale.y = 0;
+        } else {
+        particle.scale.x = particle.scale.y = 0.8;
+        }
+        }
+        particle.updatePhysics();
+        with(particle.position) {
+        if (y < -1000) {
+        y += 2000
+        }
+        if (x > 1000) {
+        x -= 2000
+        } else {
+        if (x < -1000) {
+        x += 2000
+        }
+        }
+        if (z > 1000) {
+        z -= 2000
+        } else {
+        if (z < -1000) {
+        z += 2000
+        }
+        }
+        }
+        }
+        camera.position.x += (mouseX - camera.position.x) * 0.005;
+        camera.position.y += (-mouseY - camera.position.y) * 0.005;
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera)
+        }
+        init()
+        });
+        </script>
+
+    <!-- 头部导航栏 -->
+    
+    <div class="nav">
+        <div class="nav-list w clearfix">
+            <ul class="clearfix">
+                <li class="button"><a href="../黎晨杰+张玉成/index.html">首页</a></li>
+                <li class="button"><a href="ljx-news.html">作战咨询</a></li>
+                <li class="button"><a href="../谢雪筹/rolePlayXue.1.html">角色介绍</a></li>
+                <li class="button"><a href="../郭龙+伍俊/Features.html">游戏特色</a></li>
+                <li  class="button"><a href="../徐梓烜/崩坏3/崩坏3/www.bh3.com/index.html">壁纸下载</a></li>                   
+            </ul>
+        </div>       
+
+    </div>
+    <!-- 底部的开始 -->
+    <div class="footer">
+            <div class="footer-content">
+                <table width="1024" height="120">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="https://webstatic.bh3.com/www_bh3_com/images/miHoYo_Games.png" width="180" height="auto" style="padding:0 20px 0 0">
+                            </td>
+                            <td style="padding:12px 0">
+                                <span><p>▍健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p></span>
+                                <span style="color:dimgray"><p>▍用户协议： 
+              <a href="https://www.bh3.com/help/privacy/index.html" target="_blank" class="yangou">米哈游游戏使用许可及服务协议</a>&nbsp;&nbsp;
+              <a href="https://www.bh3.com/help/rule/index.html" target="_blank" class="yangou">米哈游用户个人信息及隐私保护政策</a>&nbsp;&nbsp;
+              <a href="https://www.bh3.com/help/jiaoyijiufenchuli/index.html" target="_blank" class="yangou">交易纠纷处理</a>&nbsp;&nbsp;
+              <a href="https://www.bh3.com/help/jiachangjianhugongcheng/index.html" target="_blank" class="yangou">家长监护工程</a>&nbsp;&nbsp;
+              <a href="https://www.bh3.com/help/fangchenmixitongshiyongzhinan/index.html" target="_blank" class="yangou">防沉迷系统</a>&nbsp;&nbsp;
+              <a href="https://webstatic.bh3.com/common/self-discipline-bh3.pdf" target="_blank" class="yangou">自律公约</a></p></span>
+                                <span><p>▍适龄提示： 本游戏适合17岁（含）以上玩家娱乐</p></span>
+                                <div style="height:10px"></div>
+                                <span><p>沪ICP备14042301号-2 沪网文〔2017〕8193-607号 文网游备字〔2016〕Ｍ-CSG 1244 号</p></span>
+                                <span><p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402001116" target="_blank"><img style="vertical-align: bottom;" src="https://webstatic.bh3.com/www_bh3_com/images/gongan.png"></a> 沪公网安备31010402001116号</p></span>
+                                <span width="100%">
+              <p>2014-2018 All Rights Reserved 米哈游科技（上海） 有限公司版权所有 <span><a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/gameNetTag/4028c08c54a47b760154a98d698e14b0" style="text-decoration: none;vertical-align: -webkit-baseline-middle;">
+      <img src="http://static.event.mihoyo.com/common/images/youxidzbq.png" style="width:18px;">
+      </a></span>
+                                <span><a href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/4028c08e4acd2047014ace03ffae00fd" style="text-decoration: none;vertical-align: -webkit-baseline-middle;">
+                <img src="https://static.event.mihoyo.com/bh3_homepage/images/common/wenhuajingying.png" style="width:24px;">
+                </a></span>
+                                <span><a href="https://218.242.124.22:8082/businessCheck/verifKey.do?showType=extShow&serial=9031000020160809091645000001123502-SAIC_SHOW_310000-20180302153146797451&signData=MEUCIQDt8wOuh6PqF5mH2jmPEl1noNpgjvbmPRiovpPr11yj5wIgWCUK8RoWbjcd155q2eQ1GLScSlyVXxi6O0kfbNejFbA=" style="text-decoration: none;vertical-align: -webkit-baseline-middle;">
+                  <img src="https://webstatic.bh3.com/www_bh3_com/images/lz2.png" style="width:20px;">
+                  </a></span>
+                                <span><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.bh3.com&at=realname" ><img style="height: 20px;" src="https://static.anquan.org/static/outer/image/sm_124x47.png"></img></a></span>
+                                </p>
+                                <p style="float:left">地址：上海市徐汇区宜山路700号C4栋5层&nbsp;&nbsp; 前台电话：86-021-60331122</p>.
+                                <br>
+                                <p style="float:left">官方客服电话：021-34203305 （工作时间：每天10点 - 20点）</p>.
+                                <p style="clear:both"></p>
+                                <p style="float:left">投诉电话：021-34203135 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投诉邮箱：tousu@mihoyo.com</p>
+                                <p style="float:right">
+                                    <a href="https://www.bh3.com/contactUs/index.html" target="_blank" class="yangou">联系方式</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.bh3.com/joinUs/index.html" target="_blank" class="yangou">加入我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a href="https://www.bh3.com/help/lawStatement_exceptionClause/index.html" target="_blank" class="yangou">免责条款</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.bh3.com/help/lawStatement_exceptionClause/index.html" target="_blank"
+                                        class="yangou">法律声明</a></p>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+</body>
+</html>

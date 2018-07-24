@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/kiana.css">
+  <link rel="stylesheet" href="css/zyc-footer.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script>
+    $(function () {
+      $('.j-kiana1,.j-content-wrap').addClass('currentLeft');
+      $('.j-nav-bar-left').addClass('btnleft');
+      $('.j-nav-bar-right').addClass('btnright');
+      $('.video').height($(window).height());
+      $(window).on('scroll',function (){
+      	var $scrollTop = $(window).scrollTop();
+      	if ( $scrollTop >= 400 ){
+          $('.j-valkyria-wrap>ul>li').addClass('transleft');
+        }
+        if ( $scrollTop >= 600 ){
+          $('.j-content-wrap2>h2,.j-content-wrap2>h3').addClass('mat');
+        }
+        if ( $scrollTop >= 800 ){
+          $('.j-skill-column').addClass('flyfrombottom');
+          $('.j-skill-icon-wrap-circle').addClass('scale');
+        }
+        if ( $scrollTop >= 1500 ){
+      	  $('.j-content-wrap3>h2,.j-content-wrap3>h3').addClass('trasleft');
+        }
+        if ( $scrollTop >= 1700 ){
+          // var timeId = null;
+          // var $text = '女武神·游侠';
+          // var $newStr = '';
+          // var index = 0;
+          // clearInterval(timeId);
+          // timeId = setInterval(function (){
+          //   if ( $text[index] != undefined ){
+          //     $newStr += $text[index];
+          //     $('.j-content-wrap3>h4').text($newStr);
+          //     index++;
+          //   }else {
+          //     clearInterval(timeId);
+          //   }
+          // },300);
+          $('.j-content-wrap3>h4').addClass('scale');
+          $('.j-content-wrap3>p').addClass('p1');
+        }
+      });
+      $('.j-skill-video-wrap').on('click',function (){
+      	$('.video').show();
+        $('.video>ul').show();
+        $('body').css('overflowY','hidden');
+      });
+      $('.close').on('click',function (){
+      	$('.video').hide();
+        $('body').css('overflowY','auto');
+      })
+    });
+  </script>
+</head>
+<body>
+<!--头部 star-->
+<div class="nav">
+  <div class="nav-list w">
+    <ul>
+      <li><a href="../黎晨杰+张玉成/index.html">首页</a></li>
+      <li><a href="../李嘉欣＋孟火箭/ljx-news.html">作战咨询</a></li>
+      <li><a href="../谢雪筹/rolePlayXue.1.html">角色介绍</a></li>
+      <li><a href="../郭龙+伍俊/Features.html">游戏特色</a></li>
+      <li><a href="../徐梓烜/崩坏3/崩坏3/www.bh3.com/index.html">壁纸下载</a></li>
+    </ul>
+  </div>
+</div>
+<!--头部 end-->
+<div id='j-main'>
+  <!--第一部分 star-->
+  <section class='j-section1'>
+    <div class='j-content-wrap'>
+      <h3>Kiana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kaslana</h3>
+      <h1>琪亚娜·卡斯兰娜</h1>
+      <h2>角色卡：女武神·游侠</h2>
+    </div>
+    <div class='j-kiana1'></div>
+    <div class='j-nav-bar'>
+      <div class='j-nav-bar-left'>
+        <div class='j-nav-left-arrow'></div>
+        <div class='j-nav-left-btn'>
+          <div class='j-nav-avatar-left'></div>
+        </div>
+      </div>
+      <div class='j-nav-bar-right'>
+        <div class='j-nav-right-arrow'></div>
+        <div class='j-nav-right-btn'>
+          <div class='j-nav-avatar-right'></div>
+        </div>
+      </div>
+    </div>
+    <div class='j-valkyria-desc'>
+      <div class='j-valkyria-wrap'>
+        <div class='j-valkyria-pv-cover'>
+          <div class='j-cover-pic'></div>
+        </div>
+        <ul>
+          <li class='li1'>
+            姓名：
+            <span style="color: #fff; font-size: 16px">琪亚娜·卡斯兰娜</span>
+          </li>
+          <li>
+            年龄:
+            <span style="color: #fff; font-size: 16px">16岁</span>
+          </li>
+          <li>
+            装甲:
+            <span style="color: #fff; font-size: 16px">女武神·游侠</span>
+          </li>
+          <li class='li4'>
+            作战方式:
+            <span style="color: #fff; font-size: 16px">枪斗术</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr>
+<!--第一部分 end-->
+<!--第二部分 star-->
+  <section class='j-section2'>
+    <div class='j-content-wrap2'>
+      <h2>角色招式</h2>
+      <h3>Role Skill</h3>
+      <div class='j-skill-wrap'>
+        <div class='j-skill-column'>
+          <ul>
+            <li>
+              <div class='j-skill-icon-wrap-circle'>
+                <div class='j-skill-icon-wrap'>
+                  <div class='j-skill-icon'></div>
+                </div>
+              </div>
+            </li>
+            <li class='j-skill-name'>组合旋转标靶</li>
+            <li>
+              <div class='j-skill-video-wrap'>
+                <div class='j-skill-video-mask' data='1'></div>
+                <div class='j-skill-video-cover'></div>
+              </div>
+            </li>
+            <li class='j-skill-desc'></li>
+          </ul>
+        </div>
+        <div class='j-skill-column'>
+          <ul>
+            <li>
+              <div class='j-skill-icon-wrap-circle icon2'>
+                <div class='j-skill-icon-wrap'>
+                  <div class='j-skill-icon'></div>
+                </div>
+              </div>
+            </li>
+            <li class='j-skill-name'>陨石冲击</li>
+            <li>
+              <div class='j-skill-video-wrap'>
+                <div class='j-skill-video-mask' data='1'></div>
+                <div class='j-skill-video-cover bg2'></div>
+              </div>
+            </li>
+            <li class='j-skill-desc'></li>
+          </ul>
+        </div>
+        <div class='j-skill-column'>
+          <ul>
+            <li>
+              <div class='j-skill-icon-wrap-circle icon3'>
+                <div class='j-skill-icon-wrap'>
+                  <div class='j-skill-icon'></div>
+                </div>
+              </div>
+            </li>
+            <li class='j-skill-name'>时空奇点</li>
+            <li>
+              <div class='j-skill-video-wrap'>
+                <div class='j-skill-video-mask' data='1'></div>
+                <div class='j-skill-video-cover bg3'></div>
+              </div>
+            </li>
+            <li class='j-skill-desc'></li>
+          </ul>
+        </div>
+        <div class='j-skill-column'>
+          <ul>
+            <li>
+              <div class='j-skill-icon-wrap-circle icon4'>
+                <div class='j-skill-icon-wrap'>
+                  <div class='j-skill-icon'></div>
+                </div>
+              </div>
+            </li>
+            <li class='j-skill-name'>星云冲击</li>
+            <li>
+              <div class='j-skill-video-wrap'>
+                <div class='j-skill-video-mask' data='1'></div>
+                <div class='j-skill-video-cover bg4'></div>
+              </div>
+            </li>
+            <li class='j-skill-desc'></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+<!--第二部分 end-->
+<!--第三部分 start-->
+  <section class='j-section3'>
+    <div class='j-content-wrap3'>
+      <h2>角色介绍</h2>
+      <h3>Role Introduction</h3>
+      <h4>女武神·游侠</h4>
+      <p>
+        「女武神·游侠」是琪亚娜·卡斯兰娜在在圣芙蕾雅学园的学园制服。<br/><br/>
+
+        这套「机械」属性的远程制服靠拉开与敌人的距离来制造输出的机会。<br/><br/>
+
+        琪亚娜可在远处向敌人进行连续射击，射击的伤害会逐渐升高。还可以在三连枪击后进行蓄力，从而发动「陨石冲击」，制造更为强力的一击。<br/><br/>
+
+        当敌人处于被冰冻的状态时，「女武神·游侠」出场即对单体疯狂射击，造成大量伤害。<br/><br/>
+
+        必杀技「星云冲击」可传送女武神重炮，轰击前方敌人，并将敌人击晕。<br/><br/>
+
+        「女武神·游侠」在完美闪避之后，不会直接触发时空断裂，而是制造一个黑洞般的「时空奇点」，将敌人吸引过去，同时提升己方的移动速度。
+      </p>
+    </div>
+  </section>
+<!--第三部分 end-->
+<!--footer start-->
+  <footer class="bottom">
+    <p class="pop">
+      <i class="line"></i> 健康游戏忠告 : 抵制不良游戏， 拒绝盗版游戏。注意自我保护 ，谨防受骗上当。适度游戏益脑 ，沉迷游戏伤身。合理安排时间 ，享受健康生活。
+    </p>
+    <p class="webInfo-pre">
+      <i class="line"></i>
+      <i>用户协议 : </i>
+      <span>
+            <a href="https://www.bh3.com/help/privacy/index.html" target="_blank" class="zhangyc">米哈游游戏使用许可及服务协议</a>
+            <a href="https://www.bh3.com/help/rule/index.html" target="_blank" class="zhangyc">米哈游用户个人信息及隐私保护政策</a>
+            <a href="https://www.bh3.com/help/jiaoyijiufenchuli/index.html" target="_blank" class="zhangyc">交易纠纷处理</a>
+            <a href="https://www.bh3.com/help/jiachangjianhugongcheng/index.html" target="_blank" class="zhangyc" >家长监护工程</a>
+            <a href="https://www.bh3.com/help/fangchenmixitongshiyongzhinan/index.html" target="_blank" class="zhangyc">防沉迷系统</a>
+            <a href="https://webstatic.bh3.com/common/self-discipline-bh3.pdf" target="_blank" class="zhangyc">自律公约</a>
+        </span>
+
+    </p>
+    <p class="pop1"><i class="line"></i> 适龄提示 : 本游戏适合17岁（含）以上玩家娱乐</p>
+    <p class="pop2">沪ICP备14042301号-2 沪网文〔2017〕8193-607号 文网游备字〔2016〕Ｍ-CSG 1244 号</p>
+    <p class="pop3">
+      <a href="#"><img src="images/gongan.png"></a>
+      沪公网安备31010402001116号</p>
+    <p class="pop4">
+      2014-2018 All Rights Reserved 米哈游科技（上海） 有限公司版权所有
+      <i><a href="#"><img src="images/youxidzbq.png"></a></i>
+      <i><a href="#"><img src="images/wenhuajingying.png"></a></i>
+      <i><a href="#"><img src="images/lz2.png"></a></i>
+      <i><a href="#"><img src="images/sm_124x47.png"></a></i>
+    </p>
+    <p class="pop5">地址：上海市徐汇区宜山路700号C4栋5层 前台电话：86-021-60331122</p>
+    <p>官方客服电话：021-34203305 （工作时间：每天10点 - 20点）.</p>
+    <p>
+      投诉电话：021-34203135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投诉邮箱：tousu@mihoyo.com</p>
+    <ul class="callone">
+      <li><a href="https://www.bh3.com/contactUs/index.html" target="_blank">联系我们</a></li>
+      <li><a href="https://www.bh3.com/joinUs/index.html" target="_blank">加入我们</a></li>
+      <li><a href="https://www.bh3.com/help/lawStatement_exceptionClause/index.html" target="_blank">免责条款</a></li>
+      <li><a href="https://www.bh3.com/help/lawStatement_exceptionClause/index.html" target="_blank">法律声明</a></li>
+    </ul>
+  </footer>
+<!--footer end-->
+  <div class='video'>
+    <ul>
+      <li><video src="video/skill_1.mp4" controls></video></li>
+      <li><video src="video/skill_2.mp4" controls></video></li>
+      <li><video src="video/skill_3.mp4" controls></video></li>
+      <li><video src="video/skill_4.mp4" controls></video></li>
+    </ul>
+    <span class='close'>X</span>
+  </div>
+</div>
+</body>
+</html>

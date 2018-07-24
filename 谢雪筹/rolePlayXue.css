@@ -1,0 +1,609 @@
+    /* 初始代码 */
+    
+    div,
+    p,
+    a,
+    i,
+    br,
+    span,
+    img,
+    input,
+    button,
+    table,
+    th,
+    tt,
+    tr,
+    ul,
+    ol,
+    li,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    em,
+    strong {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        /* 删除下划线 */
+        color: #fff;
+    }
+    
+    img {
+        border: 0 none;
+        vertical-align: middle;
+    }
+    
+    input {
+        border: 0 none;
+        outline: 0 none;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    i,
+    em {
+        font-style: normal;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    strong {
+        font-weight: normal;
+    }
+    
+    body {
+        background-color: #000;
+        font: 12px/100% "微软雅黑";
+    }
+    
+    .w {
+        width: 960px;
+        margin: 0 auto;
+    }
+    
+    .clearfix:after {
+        content: ".";
+        clear: both;
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    .clearfix {
+        *zoom: 1;
+    }
+    /* 样式代码 */
+    /* 整个页面的背景设置 */
+    
+    #rolePlayxuebg {
+        /* width: 1903px; */
+        background: url('role/Xuebg.png');
+        background-size: contain;
+        ;
+        /* opacity: 0.5; */
+    }
+    /* 头部导航栏设置 */
+    
+    .nav {
+        position: fixed;
+        top: 16px;
+        left: 0;
+        width: 100%;
+        min-width: 1024px;
+        z-index: 1000;
+        font-size: 18px;
+    }
+    
+    .nav .nav-list {
+        height: 100%;
+    }
+    
+    .nav .nav-list ul {
+        height: 100%;
+        width: 620px;
+        margin: 0 auto;
+    }
+    
+    .nav .nav-list li {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .nav .nav-list li:last-child {
+        margin-right: 0;
+    }
+    
+    .nav .nav-list li a {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        border: 2px solid #00c3ff;
+        border-radius: 10px;
+        height: 50px;
+        width: 100px;
+        transform: skew(-10deg);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav .nav-list li.nav {
+        position: fixed;
+        top: 16px;
+        left: 0;
+        width: 100%;
+        min-width: 1024px;
+        z-index: 1000;
+        font-size: 18px;
+    }
+    
+    .nav .nav-list {
+        height: 100%;
+    }
+    
+    .nav .nav-list ul {
+        height: 100%;
+        width: 620px;
+        margin: 0 auto;
+    }
+    
+    .nav .nav-list li {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    .nav .nav-list li:last-child {
+        margin-right: 0;
+    }
+    
+    .nav .nav-list li a {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        border: 2px solid #00c3ff;
+        border-radius: 10px;
+        height: 50px;
+        width: 100px;
+        transform: skew(-10deg);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav .nav-list li:nth-child(3) a {
+        background-color: #00c3ff;
+    }
+    
+    .nav .nav-list li a:hover {
+        border-color: orange;
+    }
+    /* a {
+        background-color: #00c3ff;
+    } */
+    
+    .nav .nav-list li a:hover {
+        border-color: orange;
+    }
+    /* 头部导航栏结束 */
+    /* 内容设置 */
+    /* 角色介绍文字提示信息 */
+    
+    .Xmain {
+        /* width: 1903px; */
+        position: relative;
+        top: 0px;
+        /* background-color: pink; */
+    }
+    
+    .Xmain .Xcontent {
+        position: relative;
+        width: 1366px;
+        margin: 0 auto;
+    }
+    
+    .Xmain .Xcontent .Xmsg {
+        /* width: 1024px; */
+        position: relative;
+        padding-top: 100px;
+        margin: 0 auto;
+        /* background-color: green; */
+    }
+    
+    .Xmain .Xword {
+        width: 1366px;
+        margin: 0 auto;
+        text-align: center;
+        height: 300px;
+        color: white;
+        font-size: 20px;
+        box-size: border-box;
+    }
+    
+    .Xmain .Xword h1 {
+        margin: 0 auto;
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 64px;
+        /* 字体加粗 */
+        /* 文字投影 */
+        transform: skew(-20deg);
+        display: none;
+        animation-direction: initial;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .Xmain .Xword h2 {
+        color: rgba(255, 255, 255, 0.5);
+        font-family: impact;
+        line-height: 19px;
+        font-size: 22px;
+        transform: skew(-10deg);
+        display: none;
+    }
+    
+    .Xmain .Xword .fontMsg {
+        font-size: 24px;
+        margin-top: 20px;
+        line-height: 34px;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    /* 角色介绍文字提示信息结束 */
+    /* 角色列表 */
+    
+    .Xmain .Xcontent .Xrole-list ul {
+        width: 100%;
+        margin: 20px auto;
+        width: 1366px;
+        position: relative;
+        /* background-color: pink; */
+    }
+    
+    .Xrole-list .Xul li {
+        display: inline-block;
+        width: 220px;
+        height: 308px;
+        border: 3px solid white;
+        border-radius: 16px;
+        margin: 21px;
+        overflow: hidden;
+        cursor: pointer;
+        box-sizing: content-box;
+        transition: all .5s;
+        /* 执行时长 */
+        /* opacity: 0;
+        position: absolute;
+        */
+    }
+    
+    .Xrole-list .Xul li:hover {
+        /* 照片等比例进行缩放 */
+        transform: scale(1.1, 1.1);
+    }
+    
+    .Xrole-list .Xul li .card {
+        width: 220PX;
+        height: 272px;
+        /* background-color: deeppink; */
+    }
+    
+    .Xrole-list .Xul #last {
+        position: relative;
+        margin: 0 auto;
+        left: 33%;
+        margin-left: 110px;
+    }
+    
+    .Xrole-list .Xul li .card-name {
+        width: 220px;
+        height: 36px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 36px;
+        color: #000;
+        background-color: #fff;
+    }
+    /* 添加类名进行设置图片样式 */
+    
+    .card#card-kiana-pt {
+        background: url(role/images/kiana_pt.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kiana-c1 {
+        background: url(role/images/kiana_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kiana-c2 {
+        background: url(role/images/kiana_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kiana-c3 {
+        background: url(role/images/kiana_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kiana-c4 {
+        background: url(role/images/kiana_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-mei-c1 {
+        background: url(role/images/mei_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-mei-c2 {
+        background: url(role/images/mei_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-mei-c3 {
+        background: url(role/images/mei_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-mei-c4 {
+        background: url(role/images/mei_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-c1 {
+        background: url(role/images/bronya_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-c2 {
+        background: url(role/images/bronya_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-c3 {
+        background: url(role/images/bronya_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-c4 {
+        background: url(role/images/bronya_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-c5 {
+        background: url(role/images/bronya_c5.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-c6 {
+        background: url(role/images/bronya_c6.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-himeko-c1 {
+        background: url(role/images/himeko_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-himeko-c2 {
+        background: url(role/images/himeko_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-himeko-c3 {
+        background: url(role/images/himeko_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-himeko-c4 {
+        background: url(role/images/himeko_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-sakura-c1 {
+        background: url(role/images/sakura_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-sakura-c2 {
+        background: url(role/images/sakura_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-sakura-c3 {
+        background: url(role/images/sakura_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-sakura-c4 {
+        background: url(role/images/sakura_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-theresa-c1 {
+        background: url(role/images/theresa_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-theresa-c2 {
+        background: url(role/images/theresa_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-theresa-c3 {
+        background: url(role/images/theresa_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-theresa-c4 {
+        background: url(role/images/theresa_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kallen-c1 {
+        background: url(role/images/kallen_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kallen-c2 {
+        background: url(role/images/kallen_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kallen-c3 {
+        background: url(role/images/kallen_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-fuka-c1 {
+        background: url(role/images/fuka_c1.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-fuka-c2 {
+        background: url(role/images/fuka_c2.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-fuka-c3 {
+        background: url(role/images/fuka_c3.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-fuka-c4 {
+        background: url(role/images/fuka_c4.jpg) no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .card#card-kiana-unknown {
+        background: url(role/images/kiana_unknown.jpg);
+        background-size: auto 100%;
+    }
+    
+    .card#card-mei-unknown {
+        background: url(role/images/mei_unknown.jpg);
+        background-size: auto 100%;
+    }
+    
+    .card#card-bronya-unknown {
+        background: url(role/images/bronya_unknown.jpg);
+        background-size: auto 100%;
+    }
+    
+    .card#card-himeko-unknown {
+        background: url(role/images/himeko_unknown.jpg);
+        background-size: auto 100%;
+    }
+    
+    .card#card-sakura-unknown {
+        background: url(role/images/sakura_unknown.jpg);
+        background-size: auto 100%;
+    }
+    
+    .card#card-theresa-unknown {
+        background: url(role/images/theresa_unknown.jpg);
+        background-size: auto 100%;
+    }
+    
+    .card#card-fuka-unknown {
+        background: url(role/images/fuka_unknown.jpg);
+        background-size: auto 100%;
+    }
+    /* 尾部的开始 */
+    
+    .footer {
+        width: 100%;
+        height: 300px;
+        background-color: #000;
+    }
+    
+    .bottom {
+        width: 1366px;
+        height: 240px;
+        background-color: #000;
+        font-size: 12px;
+        position: relative;
+        margin: 50px auto;
+    }
+    
+    .bottom p {
+        margin-left: 358px;
+        color: #929292;
+        height: 20px;
+        line-height: 20px;
+    }
+    
+    .bottom p.pop,
+    .bottom p.pop2 {
+        padding-top: 14px;
+    }
+    
+    .bottom p.pop4 {
+        height: 30px;
+        line-height: 30px;
+    }
+    
+    .bottom i.line {
+        width: 3px;
+        height: 14px;
+        display: inline-block;
+        background-color: #999;
+    }
+    
+    .bottom p.webInfo-pre a {
+        color: #929292;
+        margin-right: 6px;
+    }
+    
+    .bottom p.pop4 i img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .bottom p.pop4 i:nth-child(2) img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .bottom p.pop4 i:nth-child(3) img {
+        height: 24px;
+    }
+    
+    .bottom p.pop4 i:last-child img {
+        width: 60px;
+    }
+    
+    .bottom ul.callone {
+        position: absolute;
+        top: 198px;
+        right: 164px;
+    }
+    
+    .bottom ul.callone li {
+        color: #929292;
+        float: left;
+        margin-right: 15px;
+    }
+    
+    .bottom ul.callone li a {
+        color: #929292;
+    }
+    
+    .webInfo-pre .zhangyc:hover {
+        color: #fff
+    }
+    
+    .bottom .callone a:hover {
+        color: #fff
+    }

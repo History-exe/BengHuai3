@@ -1,0 +1,211 @@
+/*
+** Create by admin on 2018/5/31
+*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Microsoft Yahei;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+html,
+body {
+    width:100%;
+    font-size:20px;
+    background:black;
+}
+#bottom_bg {
+    position: absolute;
+    width: 100%;
+    height: 332px;
+    background-position: bottom center;
+    bottom: 75px;
+    background: url("stratregy/section_2_fg_1.png");
+}
+.nav {
+    position: fixed;
+    top:16px;
+    left:0;
+    width:100%;
+    min-width: 1024px;
+    z-index:1000;
+    font-size: 18px;
+}
+ul.nav-wrap {
+    position: relative;
+    width:960px;
+    margin:0 auto;
+    text-align: center;
+    white-space: nowrap;
+}
+ul.nav-wrap li {
+    list-style:none;
+    display: inline-block;
+    width: 12.5%;
+}
+list {
+    list-style: none;
+}
+#main {
+    width: 100%;
+    /* height: 100px; */
+    margin: auto;
+    color: #fff;
+    background-image:url("stratregy/253.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 378px;
+    position: relative;
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+#female_role {
+    background-image: url("stratregy/kiana.png");
+    background-repeat: no-repeat;
+    width: 492px;
+    height: 595px;
+    position: absolute;
+    top: 0;
+    margin-left: 50%;
+}
+.big_bg {
+    border: 3px solid rgba(0,0,0,0.2);
+    padding: 1px 20px;
+    background-color: #282f3f;
+    padding-bottom: 0;
+    border-bottom: 0px solid;
+    width: 960px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+#back_link {
+    position: absolute;
+    top:14px;
+    right: 0;
+    display: block;
+}
+.news-nav {
+    border-bottom:2px solid #4b869f;
+    height: 58px;
+    clear:both;
+}
+.news-nav li {
+    list-style-type: none;
+    float: left;
+}
+.news-nav li a {
+    display: block;
+    width: 86px;
+    height: 57px;
+    text-align: center;
+    line-height: 57px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: transparent;
+}
+#title_img_big {
+    display: block;
+    margin: 35px auto;
+    border: 3px solid #fff;
+}
+
+.big_bg h2 {
+    text-align: center;
+    font-size: 30px;
+    transform: scale(1);
+    font-weight: normal;
+}
+.big_bg .create_time {
+    text-align: right;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+.page_contro1 {
+    font-size: 18px;
+    padding: 70px 0;
+}
+.pull-right {
+    float: right;
+}
+
+/* 头部导航栏的css代码 */
+.nav {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    width: 100%;
+    min-width: 1024px;
+    z-index: 1000;
+    font-size: 18px;
+}
+
+.nav .nav-list {
+    height: 100%;
+}
+
+.nav .nav-list ul {
+    height: 100%;
+    /* width: 620px; */
+    width: 670px;
+    margin:0 auto;
+}
+
+.nav .nav-list li {
+    float: left;
+    margin-right: 20px;
+}
+
+.nav .nav-list li:last-child {
+    margin-right: 0;
+}
+
+
+
+.nav .nav-list li a {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border: 2px solid #85d9f3;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    transform:skew(-10deg);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav .nav-list li:nth-child(2) a{
+    background-color: #00c3ff;
+}
+
+.nav .nav-list li a:hover {
+    border-color: orange;
+}
+
+li {
+    list-style: none;
+}
+
+/* 回到顶部的css代码 */
+.actGotop {
+    position:fixed;
+    bottom: 40px;
+    right: 100px;
+    width: 150px;
+    height: 195px;
+    display: none;
+    cursor: pointer;
+}
+
+.actGotop i {
+    width: 150px;
+    height: 195px;
+    display:inline-block;
+    background: url("../images/blog7year_gotop.png") no-repeat;
+    outline: none;
+}

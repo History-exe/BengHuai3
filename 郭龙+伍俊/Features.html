@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏特色</title>
+    <link rel="stylesheet" href="css/Features.css">
+    <style>
+        :root {
+            font-size: 10px;
+            --border-color: #e70;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", Arial, sans-serif;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            min-height: 100vh;
+            color: #fafafa;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .cube-container {
+            position: relative;
+            width: 30rem;
+            height: 30rem;
+            margin: 5rem auto 6rem;
+            perspective: 100rem;
+        }
+
+        .cube {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 1s cubic-bezier(0.32, 0.05, 0.35, 1.6);
+        }
+
+        .cube-face-image {
+            display: block;
+            position: absolute;
+            box-shadow: 0 0 0.5rem #fff,
+            0 0 1.5rem var(--border-color),
+            0 0 3rem var(--border-color);
+        }
+
+        .image-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .image-buttons input {
+            width: 250px;
+            height: 100px;
+            border: 0.2rem solid #fafafa;
+        }
+
+        .image-buttons input:focus {
+            outline: none;
+            border: 0.2rem solid var(--border-color);
+        }
+        .image-1 {
+            transform: translateZ(15rem);
+        }
+        .image-2 {
+            transform: rotateX(-180deg) translateZ(15rem);
+        }
+        .image-3 {
+            transform: rotateY(90deg) translateZ(15rem);
+        }
+        .image-4 {
+            transform: rotateY(-90deg) translateZ(15rem);
+        }
+        .image-5 {
+            transform: rotateX(90deg) translateZ(15rem);
+        }
+        .image-6 {
+            transform: rotateX(-90deg) translateZ(15rem);
+        }
+
+        .cube.initial-position {
+            transform: translateZ(-15rem) translateY(-2rem) rotateX(-15deg) rotateY(18deg) rotateZ(2deg);
+        }
+
+        .cube.show-image-1 {
+            transform: translateZ(-15rem);
+        }
+        .cube.show-image-2 {
+            transform: translateZ(-15rem) rotateX(180deg);
+        }
+        .cube.show-image-3 {
+            transform: translateZ(-15rem) rotateY(-90deg);
+        }
+        .cube.show-image-4 {
+            transform: translateZ(-15rem) rotateY(90deg);
+        }
+        .cube.show-image-5 {
+            transform: translateZ(-15rem) rotateX(-90deg);
+        }
+        .cube.show-image-6 {
+            transform: translateZ(-15rem) rotateX(90deg);
+        }
+    </style>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/Features.js"></script>
+</head>
+<body>
+
+<div class="Main-nav wrap">
+    <ul>
+        <li><a href="../黎晨杰+张玉成/index.html">首页</a></li>
+        <li><a href="../李嘉欣＋孟火箭/ljx-news.html">作战资讯</a></li>
+        <li><a href="../谢雪筹/rolePlayXue.1.html">角色介绍</a></li>
+        <li><a href="Features.html">游戏特色</a></li>
+        <li><a href="../徐梓烜/崩坏3/崩坏3/www.bh3.com/index.html">壁纸下载</a></li>
+    </ul>
+</div>
+
+<div class="side-nav">
+    <ul class="side_nav" style="left: 1378px; display: block;">
+        <li><a href="javascript:;" onclick="$('html,body').animate({scrollTop:0},400);">TOP</a></li>
+        <li><a href="javascript:;" onclick="$('html,body').animate({scrollTop:$('.Features-second').offset().top},400);">欢迎加入</a></li>
+        <li><a href="javascript:;" onclick="$('html,body').animate({scrollTop:$('.Features-fivth').offset().top},400);">圣痕系统</a></li>
+        <li><a href="javascript:;" onclick="$('html,body').animate({scrollTop:$('.Features-third').offset().top},400);">选择战士</a></li>
+        <li><a href="javascript:;" onclick="$('html,body').animate({scrollTop:$('.Features-fourth').offset().top},400);">指挥官</a></li>
+        <li><a href="javascript:;" onclick="$('html,body').animate({scrollTop:$('.Features-footer').offset().top},400);">底部</a></li>
+    </ul>
+</div>
+
+<!--Features-top的开始-->
+<div class="Features-top">
+    <img src="Images/section_1_fg_1.png" alt="" id="flow1">
+    <img src="Images/section_1_fg_2%7F.png" alt="" id="flow2">
+    <div class="innner wrap">
+        <h1>为世界上<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所有的美好而战
+        </h1>
+        <p class="first-text">&nbsp;&nbsp;在被崩坏侵蚀的世界中</p>
+        <p class="second-text">&nbsp;由勇敢的少女组成的女武神部队</p>
+        <p class="third-text">为守护世界而展开了战斗</p>
+    </div>
+</div>
+<!--Features-top的结束-->
+<hr>
+<!--Features-second的开始-->
+<div class="Features-second">
+    <img src="Images/section_2_fg_1%7F.png" alt="">
+    <div class="second-inner wrap">
+        <h1>欢迎加入女武神</h1>
+        <p class="first-text">在不远的未来，</p>
+        <p class="second-text">神秘的灾害<span class="tag">「崩坏」</span>侵蚀了世界</p>
+        <p class="third-text">被崩坏感染的人类变成了没有思维，</p>
+        <p class="fourth-text">只懂破坏的<span class="tag">「死士」</span></p>
+        <p class="fivth-text">唯一可以抵挡崩坏的只有那些拥有抗体的少女和由她们组成的<span class="tag">「女武神」</span>部队</p>
+        <p class="sixth-text">少女们穿起冰冷的机甲，</p>
+        <p class="seventh-text">拿起沉重的武器，</p>
+        <p class="eighth-text">为了<span class="tag   ">守护这个曾经美好的世界</span></p>
+    </div>
+</div>
+<!--Features-second的结束-->
+<hr>
+<!--Features-fivth的开始-->
+<div class="Features-fivth">
+    <div class="fivth-inner">
+        <div class="nav">
+            <span class="nav1">
+                <a href="javascript:void(0)">姬轩辕</a>
+                <a href="javascript:void(0)">莎士比亚</a>
+                <a href="javascript:void(0)">莎莲娜</a>
+                <a href="javascript:void(0)">尼古拉·特斯拉</a>
+                <a href="javascript:void(0)">夏洛特</a>
+                <a href="javascript:void(0)">伊丽莎白•巴托里</a>
+            </span>
+            <span class="nav2">
+                <a href="javascript:void(0)">薇欧拉</a>
+                <a href="javascript:void(0)">王昭君</a>
+                <a href="javascript:void(0)">坂本龙马</a>
+                <a href="javascript:void(0)">叶卡捷琳娜</a>
+                <a href="javascript:void(0)">李耳</a>
+                <a href="javascript:void(0)">克丽奥佩拉</a>
+            </span>
+        </div>
+        <ul class="con">
+            <li style="display: block">
+                <img src="Images/m5-01.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-02.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-03.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-04.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-05.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-06.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-07.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-08.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-09.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-10.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-11.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+            <li>
+                <img src="Images/m5-12.png" alt="">
+                <a href="#" target="_blank">更多资料>></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--Features-fivth的结束-->
+
+<!--Features-third的开始-->
+<div class="Features-third">
+    <div class="third-inner">
+        <ul>
+            <li><img src="Images/character-1.jpg" alt=""></li>
+            <li><img src="Images/character-2.jpg" alt=""></li>
+            <li><img src="Images/character-3.jpg" alt=""></li>
+            <li><img src="Images/character-4.jpg" alt=""></li>
+            <li><img src="Images/character-5.jpg" alt=""></li>
+            <span class="close-Btn">×</span>
+        </ul>
+    </div>
+    <div class="content wrap">
+        <h1>选择您的战士</h1>
+        <p class="first-text">在游戏中，您将指挥各具特色的少女们进行战斗。</p>
+        <p class="second-text">她们有的是擅长远距离战斗的枪手，</p>
+        <p class="third-text">有的是身手敏捷的刺客，</p>
+        <p class="fourth-text">也有操纵重型机甲的少女。</p>
+        <div class="role-link">
+            <a href="../谢雪筹/rolePlayXue.1.html">角色介绍<br><span>VALKYRIA</span></a>
+        </div>
+    </div>
+
+
+</div>
+<!--Features-third的结束-->
+<hr>
+
+<!--Features-fourth的开始-->
+<div class="Features-fourth">
+    <div class="cube-container">
+        <div class="cube initial-position">
+            <img class="cube-face-image image-1" src="Images/game-role-1.png" width="300px" height="300px">
+            <img class="cube-face-image image-2" src="Images/game-role-2.png" width="300px" height="300px">
+            <img class="cube-face-image image-3" src="Images/game-role-3.png" width="300px" height="300px">
+            <img class="cube-face-image image-4" src="Images/game-role-4.png" width="300px" height="300px">
+            <img class="cube-face-image image-5" src="Images/game-role-5.png" width="300px" height="300px">
+            <img class="cube-face-image image-6" src="Images/game-role-6.png" width="300px" height="300px">
+        </div>
+
+    </div>
+    <!-- 缩略图 -->
+    <div class="image-buttons">
+        <input type="image" class="show-image-1" src="Images/game-role-1.png">
+        <input type="image" class="show-image-2" src="Images/game-role-2.png">
+        <input type="image" class="show-image-3" src="Images/game-role-3.png">
+        <input type="image" class="show-image-4" src="Images/game-role-4.png">
+        <input type="image" class="show-image-5" src="Images/game-role-5.png">
+        <input type="image" class="show-image-6" src="Images/game-role-6.png">
+    </div>
+    <h1>指挥官<br>&nbsp;&nbsp;&nbsp;&nbsp;我们需要你的协助！</h1>
+</div>
+
+<script>
+
+    window.addEventListener ( "DOMContentLoaded", function () {
+        var cube = document.querySelector ( ".cube" ), imageButtons = document.querySelector ( ".image-buttons" )
+        var cubeImageClass = cube.classList[ 1 ]
+        //Add click event listener to image buttons container
+        imageButtons.addEventListener ( "click", function ( e ) {
+            //Get node type and class value of clicked element
+            var targetNode = e.target.nodeName, targetClass = e.target.className
+            //Check if image input has been clicked and isn't the currently shown image
+            if ( targetNode === "INPUT" && targetClass !== cubeImageClass ) {
+                console.log ( "Show Image: " + targetClass.charAt ( 11 ) )
+                //Replace previous cube image class with new class
+                cube.classList.remove ( cubeImageClass )
+                cube.classList.add ( targetClass )
+                //Update cube image class variable with new class
+                cubeImageClass = targetClass
+            }
+        } )
+    } )
+</script>
+<!--Features-fourth的结束-->
+<hr>
+<!--Features-footer的开始-->
+<div class="Features-footer">
+    <div class="footer-inner wrap">
+        <p class="first-text"><span class="tag">|</span>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+        </p>
+        <span class="tag">|</span>
+        <ul>
+            <li>用户协议：</li>
+            <li><a href="#">米哈游游戏使用许可及服务协议</a></li>
+            <li><a href="#">米哈游用户个人信息及隐私保护政策</a></li>
+            <li><a href="#">交易纠纷处理</a></li>
+            <li><a href="#">家长监护工程</a></li>
+            <li><a href="#">防沉迷系统</a></li>
+            <li><a href="#">自律公约</a></li>
+        </ul>
+        <p class="second-text"><span class="tag">|</span>适龄提示： 本游戏适合17岁（含）以上玩家娱乐</p>
+        <p class="third-text">沪ICP备14042301号-2 沪网文〔2017〕8193-607号 文网游备字〔2016〕Ｍ-CSG 1244 号</p>
+        <p class="fourth-text"><a href="#"><img src="Images/gongan.png" alt=""></a>沪公网安备31010402001116号</p>
+        <p class="fivth-text">2014-2018 All Rights Reserved 米哈游科技（上海） 有限公司版权所有<a href="#"><img
+                src="Images/youxidzbq.png" alt=""></a><a href="#"><img src="Images/wenhuajingying.png" alt=""></a><a
+                href="#"><img src="Images/lz2.png" alt=""></a><a href="#"><img src="Images/sm_124x47.png" alt=""></a>
+        </p>
+        <p class="sixth-text">地址：上海市徐汇区宜山路700号C4栋5层 前台电话：86-021-60331122</p>
+        <p class="seventh-text">官方客服电话：021-34203305 （工作时间：每天10点 - 20点）</p>
+        <p class="eighth-text">投诉电话：021-34203135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投诉邮箱：tousu@mihoyo.com</p>
+        <ul class="links">
+            <li><a href="#">联系方式</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">免责条款</a></li>
+            <li><a href="#">法律声明</a></li>
+        </ul>
+    </div>
+</div>
+<!--Features-footer的结束-->
+</body>
+</html>
